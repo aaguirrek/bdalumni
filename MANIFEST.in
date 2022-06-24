@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include bdalumni *.css
+recursive-include bdalumni *.csv
+recursive-include bdalumni *.html
+recursive-include bdalumni *.ico
+recursive-include bdalumni *.js
+recursive-include bdalumni *.json
+recursive-include bdalumni *.md
+recursive-include bdalumni *.png
+recursive-include bdalumni *.py
+recursive-include bdalumni *.svg
+recursive-include bdalumni *.txt
+recursive-exclude bdalumni *.pyc
