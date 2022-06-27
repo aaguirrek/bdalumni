@@ -13,13 +13,17 @@ app_license = "MIT"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/bdalumni/css/bdalumni.css"
+app_include_css = "/assets/bdalumni/css/bdalumni.css"
 # app_include_js = "/assets/bdalumni/js/bdalumni.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/bdalumni/css/bdalumni.css"
+web_include_css = "/assets/bdalumni/css/bdalumni_web.css"
 # web_include_js = "/assets/bdalumni/js/bdalumni.js"
 
+
+website_context = {
+	"splash_image": "/assets/bdalumni/images/evolution.svg",
+}
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "bdalumni/public/scss/website"
 
