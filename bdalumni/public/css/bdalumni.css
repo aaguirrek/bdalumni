@@ -1,6 +1,14 @@
 .theme-grid .theme-title{
     display:none!important;
 }
-a[href="/app/website"] {
-    display: none!important;
+.btn {
+    border-radius: 30px!important;
+}
+.level-left .btn-group{
+    
+    box-shadow: none!important;
+}
+
+ .btn-group .btn{
+margin-right: 5px!important;
 }
