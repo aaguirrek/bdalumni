@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-07-15 13:18:08.593817",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "pregunta",
+  "tipo_de_pregunta",
+  "section_break_3",
+  "opcion_1",
+  "opcion_2",
+  "opcion_3",
+  "opcion_4",
+  "opcion_5",
+  "column_break_9",
+  "correcto_1",
+  "correcto_2",
+  "correcto_3",
+  "correcto_4",
+  "correcto_5"
+ ],
+ "fields": [
+  {
+   "fieldname": "pregunta",
+   "fieldtype": "Data",
+   "label": "Pregunta"
+  },
+  {
+   "fieldname": "tipo_de_pregunta",
+   "fieldtype": "Select",
+   "label": "Tipo de pregunta",
+   "options": "Si/No\nM\u00faltiple\nRellenar\nSeleccionar"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "opcion_1",
+   "fieldtype": "Data",
+   "label": "Opcion 1"
+  },
+  {
+   "fieldname": "opcion_2",
+   "fieldtype": "Data",
+   "label": "Opcion 2"
+  },
+  {
+   "fieldname": "opcion_3",
+   "fieldtype": "Data",
+   "label": "Opcion 3"
+  },
+  {
+   "fieldname": "opcion_4",
+   "fieldtype": "Data",
+   "label": "Opcion 4"
+  },
+  {
+   "fieldname": "opcion_5",
+   "fieldtype": "Data",
+   "label": "Opcion 5"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "correcto_1",
+   "fieldtype": "Check",
+   "label": "Correcto"
+  },
+  {
+   "default": "0",
+   "fieldname": "correcto_2",
+   "fieldtype": "Check",
+   "label": "Correcto"
+  },
+  {
+   "default": "0",
+   "fieldname": "correcto_3",
+   "fieldtype": "Check",
+   "label": "Correcto"
+  },
+  {
+   "default": "0",
+   "fieldname": "correcto_4",
+   "fieldtype": "Check",
+   "label": "Correcto"
+  },
+  {
+   "default": "0",
+   "fieldname": "correcto_5",
+   "fieldtype": "Check",
+   "label": "Correcto"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-07-15 13:18:19.730036",
+ "modified_by": "Administrator",
+ "module": "Bdalumni",
+ "name": "Preguntas de encuestas",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

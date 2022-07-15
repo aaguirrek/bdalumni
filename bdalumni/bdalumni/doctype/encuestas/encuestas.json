@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:nombre",
+ "creation": "2022-07-15 13:10:39.824134",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "nombre",
+  "preguntas_section",
+  "preguntas_de_encuestas",
+  "nota_section",
+  "base",
+  "column_break_6",
+  "resultado"
+ ],
+ "fields": [
+  {
+   "fieldname": "nombre",
+   "fieldtype": "Data",
+   "label": "Nombre de encuesta",
+   "unique": 1
+  },
+  {
+   "fieldname": "preguntas_section",
+   "fieldtype": "Section Break",
+   "label": "Preguntas"
+  },
+  {
+   "fieldname": "preguntas_de_encuestas",
+   "fieldtype": "Data",
+   "label": "Preguntas de encuestas"
+  },
+  {
+   "fieldname": "nota_section",
+   "fieldtype": "Section Break",
+   "label": "Nota"
+  },
+  {
+   "fieldname": "base",
+   "fieldtype": "Float",
+   "label": "Base"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "resultado",
+   "fieldtype": "Float",
+   "label": "Resultado"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-07-15 13:20:05.736104",
+ "modified_by": "Administrator",
+ "module": "Bdalumni",
+ "name": "Encuestas",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

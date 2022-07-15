@@ -1,16 +1,48 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:nombre",
+ "autoname": "field:codigo_del_estudiante",
  "creation": "2022-06-24 11:15:19.263955",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "nombre",
-  "eda",
+  "situaci\u00f3n_laboral_section",
+  "estado_laboral",
+  "column_break_3",
+  "anios_experiencia",
+  "b\u00e1sico_section",
+  "codigo_del_estudiante",
+  "apellidos",
+  "fecha_de_nacimiento",
   "foto",
-  "bio"
+  "sube_tu_cv",
+  "column_break_4",
+  "dni",
+  "nombre",
+  "estado_civil",
+  "genero",
+  "datos_b\u00e1sicos_section",
+  "correo_del_egresado",
+  "correo_personal",
+  "numero_de_celular",
+  "telefono_de_casa",
+  "column_break_12",
+  "pais_de_residencia",
+  "departamento",
+  "provincia",
+  "distrito",
+  "domicilio",
+  "educacion_basica_section",
+  "educacion_basica",
+  "educacion_superior_section",
+  "educacion_superior",
+  "certificaciones_section",
+  "certificaciones",
+  "habilidades_section",
+  "habilidades",
+  "idioma_section",
+  "idioma"
  ],
  "fields": [
   {
@@ -20,27 +52,207 @@
    "unique": 1
   },
   {
-   "fieldname": "eda",
-   "fieldtype": "Int",
-   "label": "Edad"
-  },
-  {
    "fieldname": "foto",
    "fieldtype": "Attach Image",
    "label": "Foto de perfil"
   },
   {
-   "fieldname": "bio",
+   "fieldname": "codigo_del_estudiante",
    "fieldtype": "Data",
-   "label": "Biograf\u00eda"
+   "label": "codigo del estudiante",
+   "unique": 1
+  },
+  {
+   "fieldname": "fecha_de_nacimiento",
+   "fieldtype": "Date",
+   "label": "Fecha de nacimiento"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dni",
+   "fieldtype": "Data",
+   "label": "DNI"
+  },
+  {
+   "fieldname": "estado_civil",
+   "fieldtype": "Select",
+   "label": "Estado Civil",
+   "options": "Soltero\nCasado\nDivorciado\nViudo"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "datos_b\u00e1sicos_section",
+   "fieldtype": "Section Break",
+   "label": "Datos Personales"
+  },
+  {
+   "fieldname": "genero",
+   "fieldtype": "Select",
+   "label": "Genero",
+   "options": "M\u00e1sculino\nFemenino"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "correo_del_egresado",
+   "fieldtype": "Data",
+   "label": "Correo del egresado",
+   "options": "Email"
+  },
+  {
+   "fieldname": "correo_personal",
+   "fieldtype": "Data",
+   "label": "Correo personal",
+   "options": "Email"
+  },
+  {
+   "fieldname": "numero_de_celular",
+   "fieldtype": "Data",
+   "label": "Numero de celular",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "telefono_de_casa",
+   "fieldtype": "Data",
+   "label": "Telefono de casa",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "pais_de_residencia",
+   "fieldtype": "Link",
+   "label": "Pais de residencia",
+   "options": "Country"
+  },
+  {
+   "fieldname": "departamento",
+   "fieldtype": "Data",
+   "label": "Departamento"
+  },
+  {
+   "fieldname": "provincia",
+   "fieldtype": "Data",
+   "label": "Provincia"
+  },
+  {
+   "fieldname": "distrito",
+   "fieldtype": "Data",
+   "label": "Distrito"
+  },
+  {
+   "fieldname": "domicilio",
+   "fieldtype": "Data",
+   "label": "Domicilio"
+  },
+  {
+   "fieldname": "b\u00e1sico_section",
+   "fieldtype": "Section Break",
+   "label": "B\u00e1sico"
+  },
+  {
+   "fieldname": "situaci\u00f3n_laboral_section",
+   "fieldtype": "Section Break",
+   "label": "Situaci\u00f3n Laboral"
+  },
+  {
+   "fieldname": "estado_laboral",
+   "fieldtype": "Select",
+   "label": "Estado Laboral",
+   "options": "Trabajador dependiente e interesado en oportunidades laborales\nTrabajador dependiente y no interesado en oportunidades laborales\nTrabajador independiente/Emprendedor e interesado en oportunidades laborales\nTrabajador independiente/Emprendedor y no interesado en oportunidades laborales\nNo trabajador e interesado en oportunidades laborales\nNo trabajador y no  interesado en oportunidades laborales\nEstudiante a tiempo completo y no interesado en oportunidades laborales\nEstudiante a tiempo completo e interesado en oportunidades laborales"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "educacion_basica_section",
+   "fieldtype": "Section Break",
+   "label": "Educaci\u00f3n B\u00e1sica"
+  },
+  {
+   "fieldname": "educacion_basica",
+   "fieldtype": "Table",
+   "label": "Educacion Basica",
+   "options": "Perfil del exaluno Educacion Basica"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "educacion_superior_section",
+   "fieldtype": "Section Break",
+   "label": "Educaci\u00f3n Superior"
+  },
+  {
+   "fieldname": "educacion_superior",
+   "fieldtype": "Table",
+   "label": "Educacion Superior",
+   "options": "Perfil del exalumno Educacion Superior"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "habilidades_section",
+   "fieldtype": "Section Break",
+   "label": "Habilidades"
+  },
+  {
+   "fieldname": "habilidades",
+   "fieldtype": "Table",
+   "label": "Habilidades",
+   "options": "Habilidades"
+  },
+  {
+   "fieldname": "apellidos",
+   "fieldtype": "Data",
+   "label": "Apellidos"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "certificaciones_section",
+   "fieldtype": "Section Break",
+   "label": "Certificaciones"
+  },
+  {
+   "fieldname": "certificaciones",
+   "fieldtype": "Table",
+   "label": "Certificaciones",
+   "options": "Certificaciones"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "idioma_section",
+   "fieldtype": "Section Break",
+   "label": "Idioma"
+  },
+  {
+   "fieldname": "idioma",
+   "fieldtype": "Table",
+   "label": "Idioma",
+   "options": "Idiomas"
+  },
+  {
+   "fieldname": "sube_tu_cv",
+   "fieldtype": "Attach",
+   "label": "Sube tu CV"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "anios_experiencia",
+   "fieldtype": "Int",
+   "label": "A\u00f1os de experiencia"
   }
  ],
+ "image_field": "foto",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-06-24 11:15:19.263955",
+ "modified": "2022-07-15 12:48:38.570107",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Perfil del exalumno",
+ "name_case": "Title Case",
  "owner": "Administrator",
  "permissions": [
   {
@@ -57,5 +269,7 @@
   }
  ],
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "title_field": "nombre",
+ "track_changes": 1
 }

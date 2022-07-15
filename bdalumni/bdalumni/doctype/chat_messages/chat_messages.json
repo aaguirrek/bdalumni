@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-07-15 13:02:15.161223",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "chat",
+  "exalumno",
+  "mensaje",
+  "tipo"
+ ],
+ "fields": [
+  {
+   "fieldname": "chat",
+   "fieldtype": "Link",
+   "label": "Chat",
+   "options": "Chat Group"
+  },
+  {
+   "fieldname": "exalumno",
+   "fieldtype": "Link",
+   "label": "Exalumno",
+   "options": "Perfil del exalumno"
+  },
+  {
+   "fieldname": "mensaje",
+   "fieldtype": "Long Text",
+   "label": "Mensaje"
+  },
+  {
+   "fieldname": "tipo",
+   "fieldtype": "Select",
+   "label": "Tipo",
+   "options": "Texto\nImagen\nVideo\nAudio\nGif\nOtro"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-07-15 13:02:15.161223",
+ "modified_by": "Administrator",
+ "module": "Bdalumni",
+ "name": "Chat Messages",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

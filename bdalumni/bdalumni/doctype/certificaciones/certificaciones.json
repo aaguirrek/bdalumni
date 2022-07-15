@@ -1,0 +1,55 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-07-15 12:37:56.162985",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "logo",
+  "nombre",
+  "certificado",
+  "url_del_certificado",
+  "pdf_del_certificado"
+ ],
+ "fields": [
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo"
+  },
+  {
+   "fieldname": "nombre",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre del centro de formaci\u00f3n |Instituci\u00f3n Educativa"
+  },
+  {
+   "fieldname": "certificado",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre de la Certificaci\u00f3n | Licencias"
+  },
+  {
+   "fieldname": "url_del_certificado",
+   "fieldtype": "Data",
+   "label": "Url del certificado"
+  },
+  {
+   "fieldname": "pdf_del_certificado",
+   "fieldtype": "Attach",
+   "label": "PDF del certificado"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-07-15 12:37:56.162985",
+ "modified_by": "Administrator",
+ "module": "Bdalumni",
+ "name": "Certificaciones",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

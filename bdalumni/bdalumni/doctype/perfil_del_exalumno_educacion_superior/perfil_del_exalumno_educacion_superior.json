@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-07-12 11:10:21.346082",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "logo",
+  "grado",
+  "institucion",
+  "carrera",
+  "tipo_de_estudio",
+  "column_break_6",
+  "pais",
+  "\u00e1rea_de_estudio",
+  "estado",
+  "desde",
+  "hasta"
+ ],
+ "fields": [
+  {
+   "fieldname": "grado",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Grado"
+  },
+  {
+   "fieldname": "institucion",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Institucion"
+  },
+  {
+   "fieldname": "desde",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Desde"
+  },
+  {
+   "fieldname": "hasta",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Hasta"
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo"
+  },
+  {
+   "fieldname": "carrera",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Carrera o curso"
+  },
+  {
+   "fieldname": "tipo_de_estudio",
+   "fieldtype": "Select",
+   "label": "Tipo de estudio",
+   "options": "T\u00e9cnico\nProfesional T\u00e9cnico\nUniversitario\nPost Grado\nMaster\nDoctorado\nOtro"
+  },
+  {
+   "fieldname": "pais",
+   "fieldtype": "Link",
+   "label": "Pais",
+   "options": "Country"
+  },
+  {
+   "fieldname": "\u00e1rea_de_estudio",
+   "fieldtype": "Link",
+   "label": "\u00c1rea de estudio",
+   "options": "Area de estudio"
+  },
+  {
+   "fieldname": "estado",
+   "fieldtype": "Select",
+   "label": "Estado",
+   "options": "En curso\nGraduado"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-07-15 12:36:39.945986",
+ "modified_by": "Administrator",
+ "module": "Bdalumni",
+ "name": "Perfil del exalumno Educacion Superior",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

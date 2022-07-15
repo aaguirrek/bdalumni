@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{fecha}-{nombre}",
+ "creation": "2022-07-15 12:53:39.200279",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "flyer",
+  "nombre",
+  "fecha",
+  "column_break_4",
+  "lugar",
+  "organizado_por",
+  "hora",
+  "section_break_8",
+  "url_del_evento"
+ ],
+ "fields": [
+  {
+   "fieldname": "flyer",
+   "fieldtype": "Attach Image",
+   "label": "Flyer"
+  },
+  {
+   "fieldname": "nombre",
+   "fieldtype": "Data",
+   "label": "Nombre"
+  },
+  {
+   "fieldname": "fecha",
+   "fieldtype": "Date",
+   "label": "Fecha"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "lugar",
+   "fieldtype": "Data",
+   "label": "Lugar"
+  },
+  {
+   "fieldname": "organizado_por",
+   "fieldtype": "Data",
+   "label": "Organizado por"
+  },
+  {
+   "fieldname": "hora",
+   "fieldtype": "Time",
+   "label": "Hora"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "url_del_evento",
+   "fieldtype": "Data",
+   "label": "Url del evento"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-07-15 12:54:17.153645",
+ "modified_by": "Administrator",
+ "module": "Bdalumni",
+ "name": "Eventos",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

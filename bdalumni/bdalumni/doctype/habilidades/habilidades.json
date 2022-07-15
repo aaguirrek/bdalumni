@@ -1,0 +1,50 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-07-12 11:26:45.320317",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "nombre",
+  "nivel",
+  "certificado",
+  "certificado_adjunto"
+ ],
+ "fields": [
+  {
+   "fieldname": "nombre",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre"
+  },
+  {
+   "fieldname": "nivel",
+   "fieldtype": "Rating",
+   "in_list_view": 1,
+   "label": "Nivel"
+  },
+  {
+   "fieldname": "certificado",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Certificado"
+  },
+  {
+   "fieldname": "certificado_adjunto",
+   "fieldtype": "Attach",
+   "label": "Certificado adjunto"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-07-12 11:26:45.320317",
+ "modified_by": "Administrator",
+ "module": "Bdalumni",
+ "name": "Habilidades",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
