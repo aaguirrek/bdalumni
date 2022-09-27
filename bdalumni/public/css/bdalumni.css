@@ -4,48 +4,15 @@
 .btn {
     border-radius: 30px!important;
 }
-.level-left .btn-group{
-    
-    box-shadow: none!important;
-}
 
  .btn-group .btn{
 margin-right: 5px!important;
 }
-
-.page-actions {
-    display: none;
-}
-
-li.nav-item.dropdown.dropdown-notifications.dropdown-mobile {
-    display: none;
-}
-
-li.nav-item.dropdown.dropdown-message.dropdown-mobile.hidden {
-    display: none!important;
-}
-
-li.nav-item.dropdown.dropdown-help.dropdown-mobile.d-none.d-lg-block {
-    display: none!important;
-}
-body:not([data-route^="Workspaces"]) 
-.list-sidebar.overlay-sidebar.hidden-xs.hidden-sm {
-    display: none; 
-}
-
 body:not([data-route^="Workspaces"]) 
 .col-lg-2.layout-side-section {
     display: none;
 }
 
-.new-timeline {
-    display: none;
-}
-
-.input-group.search-bar.text-muted {
-    display: none;
-}
-
-.widget.onboarding-widget-box {
-    display: none;
+li.nav-item.dropdown.dropdown-help.dropdown-mobile.d-none.d-lg-block {
+    display: none!important;
 }

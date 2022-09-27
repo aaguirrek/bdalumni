@@ -1,0 +1,210 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:razon_social",
+ "creation": "2022-09-19 10:57:24.061703",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "user",
+  "column_break_2",
+  "password",
+  "section_break_4",
+  "ruc",
+  "razon_social",
+  "column_break_7",
+  "datos_contacto",
+  "direccion_contacto",
+  "section_break_10",
+  "nombres",
+  "apellidos",
+  "column_break_13",
+  "cargo",
+  "celular",
+  "section_break_11",
+  "logo",
+  "video_corporativo",
+  "column_break_19",
+  "rubro",
+  "sitio_web",
+  "section_break_22",
+  "facebook",
+  "twitter",
+  "column_break_25",
+  "instagram",
+  "linkedin"
+ ],
+ "fields": [
+  {
+   "fieldname": "user",
+   "fieldtype": "Data",
+   "label": "Usuario (Email)",
+   "options": "Email"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "label": "Contrase\u00f1a"
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ruc",
+   "fieldtype": "Data",
+   "label": "RUC"
+  },
+  {
+   "fieldname": "razon_social",
+   "fieldtype": "Data",
+   "label": "Raz\u00f3n Social",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "datos_contacto",
+   "fieldtype": "Data",
+   "label": "Tel\u00e9fono de contacto",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "direccion_contacto",
+   "fieldtype": "Data",
+   "label": "Direcci\u00f3n de contacto"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break",
+   "label": "Datos del representante"
+  },
+  {
+   "fieldname": "nombres",
+   "fieldtype": "Data",
+   "label": "Nombres"
+  },
+  {
+   "fieldname": "apellidos",
+   "fieldtype": "Data",
+   "label": "Apellidos"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cargo",
+   "fieldtype": "Data",
+   "label": "Cargo"
+  },
+  {
+   "fieldname": "celular",
+   "fieldtype": "Data",
+   "label": "Celular",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo"
+  },
+  {
+   "fieldname": "video_corporativo",
+   "fieldtype": "Attach",
+   "label": "Video Corporativo"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rubro",
+   "fieldtype": "Data",
+   "label": "Rubro"
+  },
+  {
+   "fieldname": "sitio_web",
+   "fieldtype": "Data",
+   "label": "Sitio Web"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break",
+   "label": "Datos de la empresa"
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break",
+   "label": "Redes Social"
+  },
+  {
+   "fieldname": "facebook",
+   "fieldtype": "Data",
+   "label": "Facebook"
+  },
+  {
+   "fieldname": "twitter",
+   "fieldtype": "Data",
+   "label": "Twitter"
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "instagram",
+   "fieldtype": "Data",
+   "label": "Instagram"
+  },
+  {
+   "fieldname": "linkedin",
+   "fieldtype": "Data",
+   "label": "LinkedIn"
+  }
+ ],
+ "image_field": "logo",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-09-19 16:34:41.181779",
+ "modified_by": "Administrator",
+ "module": "Bdalumni",
+ "name": "Empresa",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Empresa",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

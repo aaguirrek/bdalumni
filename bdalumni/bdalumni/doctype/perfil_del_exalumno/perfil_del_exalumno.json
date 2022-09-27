@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:codigo_del_estudiante",
+ "autoname": "field:correo_del_egresado",
  "creation": "2022-06-24 11:15:19.263955",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -13,13 +13,13 @@
   "anios_experiencia",
   "b\u00e1sico_section",
   "codigo_del_estudiante",
-  "apellidos",
+  "nombre",
   "fecha_de_nacimiento",
   "foto",
   "sube_tu_cv",
   "column_break_4",
   "dni",
-  "nombre",
+  "apellidos",
   "estado_civil",
   "genero",
   "datos_b\u00e1sicos_section",
@@ -27,6 +27,7 @@
   "correo_personal",
   "numero_de_celular",
   "telefono_de_casa",
+  "resumen",
   "column_break_12",
   "pais_de_residencia",
   "departamento",
@@ -37,6 +38,8 @@
   "educacion_basica",
   "educacion_superior_section",
   "educacion_superior",
+  "section_break_31",
+  "experiencia_laboral",
   "certificaciones_section",
   "certificaciones",
   "habilidades_section",
@@ -48,6 +51,7 @@
   {
    "fieldname": "nombre",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Nombre",
    "unique": 1
   },
@@ -59,6 +63,7 @@
   {
    "fieldname": "codigo_del_estudiante",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "codigo del estudiante",
    "unique": 1
   },
@@ -74,6 +79,7 @@
   {
    "fieldname": "dni",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "DNI"
   },
   {
@@ -102,7 +108,8 @@
    "fieldname": "correo_del_egresado",
    "fieldtype": "Data",
    "label": "Correo del egresado",
-   "options": "Email"
+   "options": "Email",
+   "unique": 1
   },
   {
    "fieldname": "correo_personal",
@@ -203,6 +210,7 @@
   {
    "fieldname": "apellidos",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Apellidos"
   },
   {
@@ -243,12 +251,29 @@
    "fieldname": "anios_experiencia",
    "fieldtype": "Int",
    "label": "A\u00f1os de experiencia"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_31",
+   "fieldtype": "Section Break",
+   "label": "Experiencia Laboral"
+  },
+  {
+   "fieldname": "experiencia_laboral",
+   "fieldtype": "Table",
+   "label": "Experiencia laboral",
+   "options": "Experiencia laboral"
+  },
+  {
+   "fieldname": "resumen",
+   "fieldtype": "Text",
+   "label": "Resumen"
   }
  ],
  "image_field": "foto",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-07-15 12:48:38.570107",
+ "modified": "2022-09-06 20:22:32.418494",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Perfil del exalumno",
@@ -266,10 +291,21 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Alumnis",
+   "share": 1,
+   "write": 1
   }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "title_field": "nombre",
- "track_changes": 1
+ "title_field": "nombre"
 }

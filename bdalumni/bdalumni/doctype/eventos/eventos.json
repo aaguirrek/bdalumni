@@ -15,6 +15,7 @@
   "organizado_por",
   "hora",
   "section_break_8",
+  "boton",
   "url_del_evento"
  ],
  "fields": [
@@ -60,11 +61,16 @@
    "fieldname": "url_del_evento",
    "fieldtype": "Data",
    "label": "Url del evento"
+  },
+  {
+   "fieldname": "boton",
+   "fieldtype": "Data",
+   "label": "Nombre del bot\u00f3n"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-07-15 12:54:17.153645",
+ "modified": "2022-08-04 12:14:37.758124",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Eventos",
@@ -79,6 +85,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Alumnis",
    "share": 1,
    "write": 1
   }

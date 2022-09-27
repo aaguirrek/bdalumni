@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:empresa",
+ "creation": "2022-08-04 10:51:56.887362",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "empresa",
+  "exalumno",
+  "section_break_3",
+  "nombre_del_contacto",
+  "correo_de_contacto",
+  "column_break_6",
+  "telefono_de_contacto",
+  "direcci\u00f3n_de_contacto"
+ ],
+ "fields": [
+  {
+   "fieldname": "empresa",
+   "fieldtype": "Data",
+   "label": "Empresa",
+   "unique": 1
+  },
+  {
+   "fieldname": "exalumno",
+   "fieldtype": "Link",
+   "label": "Exalumno",
+   "options": "Perfil del exalumno"
+  },
+  {
+   "fieldname": "nombre_del_contacto",
+   "fieldtype": "Data",
+   "label": "Nombre del contacto"
+  },
+  {
+   "fieldname": "correo_de_contacto",
+   "fieldtype": "Data",
+   "label": "Correo de contacto"
+  },
+  {
+   "fieldname": "telefono_de_contacto",
+   "fieldtype": "Data",
+   "label": "Telefono de contacto"
+  },
+  {
+   "fieldname": "direcci\u00f3n_de_contacto",
+   "fieldtype": "Data",
+   "label": "Direcci\u00f3n de contacto"
+  },
+  {
+   "fieldname": "section_break_3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-08-04 10:53:42.355492",
+ "modified_by": "Administrator",
+ "module": "Bdalumni",
+ "name": "Emprendimiento",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Alumnis",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

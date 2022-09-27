@@ -1,0 +1,49 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "creation": "2022-09-20 09:53:49.387551",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Empresas",
+ "links": [],
+ "modified": "2022-09-20 10:39:57.397871",
+ "modified_by": "Administrator",
+ "module": "Bdalumni",
+ "name": "Empresas",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "doc_view": "List",
+   "label": "Mis ofertas",
+   "link_to": "Oferta Laboral",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Mi Empresa",
+   "link_to": "mi-empresa",
+   "type": "Page"
+  },
+  {
+   "doc_view": "List",
+   "label": "Mis Postulantes",
+   "link_to": "Postulacion",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Tablero Principal",
+   "link_to": "Empresas",
+   "type": "Dashboard"
+  }
+ ]
+}

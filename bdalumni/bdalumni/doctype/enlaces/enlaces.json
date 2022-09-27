@@ -2,63 +2,50 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "field:nombre",
- "creation": "2022-07-15 13:10:39.824134",
+ "creation": "2022-08-04 10:47:02.831454",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "imagen",
   "nombre",
-  "preguntas_section",
-  "preguntas_de_encuestas",
-  "nota_section",
-  "base",
-  "column_break_6",
-  "resultado"
+  "column_break_3",
+  "descripci\u00f3n",
+  "enlace"
  ],
  "fields": [
   {
+   "fieldname": "imagen",
+   "fieldtype": "Attach Image",
+   "label": "Imagen"
+  },
+  {
    "fieldname": "nombre",
    "fieldtype": "Data",
-   "label": "Nombre de encuesta",
+   "label": "Nombre",
    "unique": 1
   },
   {
-   "fieldname": "preguntas_section",
-   "fieldtype": "Section Break",
-   "label": "Preguntas"
+   "fieldname": "descripci\u00f3n",
+   "fieldtype": "Small Text",
+   "label": "Descripci\u00f3n"
   },
   {
-   "fieldname": "preguntas_de_encuestas",
-   "fieldtype": "Table",
-   "label": "Preguntas de encuestas",
-   "options": "Preguntas de encuestas"
+   "fieldname": "enlace",
+   "fieldtype": "Data",
+   "label": "Enlace"
   },
   {
-   "fieldname": "nota_section",
-   "fieldtype": "Section Break",
-   "label": "Nota"
-  },
-  {
-   "fieldname": "base",
-   "fieldtype": "Float",
-   "label": "Base"
-  },
-  {
-   "fieldname": "column_break_6",
+   "fieldname": "column_break_3",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "resultado",
-   "fieldtype": "Float",
-   "label": "Resultado"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-08-03 22:50:03.997533",
+ "modified": "2022-08-04 10:52:13.804328",
  "modified_by": "Administrator",
  "module": "Bdalumni",
- "name": "Encuestas",
+ "name": "Enlaces",
  "owner": "Administrator",
  "permissions": [
   {

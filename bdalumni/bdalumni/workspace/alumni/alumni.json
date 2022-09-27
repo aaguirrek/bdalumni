@@ -69,6 +69,32 @@
   {
    "hidden": 0,
    "is_query_report": 0,
+   "label": "Otros",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Enlaces",
+   "link_to": "Enlaces",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Emprendimiento",
+   "link_to": "Emprendimiento",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
    "label": "Encuestas",
    "link_type": "DocType",
    "onboard": 0,
@@ -84,7 +110,7 @@
    "type": "Link"
   }
  ],
- "modified": "2022-07-15 13:20:32.537073",
+ "modified": "2022-08-04 10:54:09.510238",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Alumni",

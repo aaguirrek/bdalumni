@@ -1,0 +1,22 @@
+{
+ "content": null,
+ "creation": "2022-09-20 09:58:12.074719",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2022-09-26 16:22:49.713589",
+ "modified_by": "Administrator",
+ "module": "Bdalumni",
+ "name": "mi-empresa",
+ "owner": "Administrator",
+ "page_name": "mi-empresa",
+ "roles": [
+  {
+   "role": "Empresa"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 1
+}

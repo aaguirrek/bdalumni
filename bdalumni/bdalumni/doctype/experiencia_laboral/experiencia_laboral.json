@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-08-16 14:37:20.080726",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "logo_de_la_empresa",
+  "nombre_de_la_empresa",
+  "cargo",
+  "desde",
+  "hasta"
+ ],
+ "fields": [
+  {
+   "fieldname": "logo_de_la_empresa",
+   "fieldtype": "Attach Image",
+   "label": "Logo de la empresa"
+  },
+  {
+   "fieldname": "nombre_de_la_empresa",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre de la empresa"
+  },
+  {
+   "fieldname": "cargo",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "cargo"
+  },
+  {
+   "fieldname": "desde",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Desde"
+  },
+  {
+   "fieldname": "hasta",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "hasta"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-09-05 17:36:38.403901",
+ "modified_by": "Administrator",
+ "module": "Bdalumni",
+ "name": "Experiencia laboral",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
