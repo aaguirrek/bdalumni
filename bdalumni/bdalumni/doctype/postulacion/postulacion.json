@@ -52,7 +52,9 @@
   {
    "fieldname": "cv",
    "fieldtype": "Attach",
-   "label": "Cv"
+   "in_preview": 1,
+   "label": "Cv",
+   "search_index": 1
   },
   {
    "fieldname": "cumplimiento",
@@ -71,13 +73,14 @@
   },
   {
    "bold": 1,
+   "default": "En espera",
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Status",
-   "options": "En espera\nRecepcionado\nAceptado\nEn Evaluacion\nEn etapa final\nContratado",
+   "options": "En espera\nEvaluando\nContratado\nCancelado",
    "search_index": 1
   },
   {
@@ -189,7 +192,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-09-20 10:22:10.878456",
+ "modified": "2022-09-28 16:57:38.594749",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Postulacion",
