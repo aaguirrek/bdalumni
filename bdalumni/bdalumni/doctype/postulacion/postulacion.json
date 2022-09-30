@@ -105,6 +105,7 @@
    "fetch_from": "oferta_laboral.fin_de_publicaci\u00f3n",
    "fieldname": "fin_de_publicacion",
    "fieldtype": "Read Only",
+   "in_global_search": 1,
    "in_list_view": 1,
    "in_preview": 1,
    "label": "Fin de publicacion",
@@ -126,6 +127,7 @@
    "fetch_from": "exalumno.nombre",
    "fieldname": "nombre",
    "fieldtype": "Read Only",
+   "in_global_search": 1,
    "in_list_view": 1,
    "in_preview": 1,
    "label": "Nombre",
@@ -136,6 +138,7 @@
    "fetch_from": "exalumno.apellidos",
    "fieldname": "apellidos",
    "fieldtype": "Read Only",
+   "in_global_search": 1,
    "in_list_view": 1,
    "in_preview": 1,
    "in_standard_filter": 1,
@@ -145,12 +148,14 @@
    "fetch_from": "exalumno.fecha_de_nacimiento",
    "fieldname": "fecha_de_nacimiento",
    "fieldtype": "Read Only",
+   "in_global_search": 1,
    "label": "Fecha de nacimiento"
   },
   {
    "fetch_from": "exalumno.correo_personal",
    "fieldname": "correo_del_egresado",
    "fieldtype": "Read Only",
+   "in_global_search": 1,
    "label": "Correo del egresado"
   },
   {
@@ -161,6 +166,7 @@
    "fetch_from": "exalumno.numero_de_celular",
    "fieldname": "numero_de_celular",
    "fieldtype": "Read Only",
+   "in_global_search": 1,
    "label": "Numero de celular"
   },
   {
@@ -184,6 +190,7 @@
    "fetch_from": "oferta_laboral.oferta",
    "fieldname": "nombre_de_la_oferta_labora",
    "fieldtype": "Read Only",
+   "in_global_search": 1,
    "in_list_view": 1,
    "in_preview": 1,
    "in_standard_filter": 1,
@@ -192,7 +199,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-09-28 16:57:38.594749",
+ "modified": "2022-09-29 08:40:17.715409",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Postulacion",

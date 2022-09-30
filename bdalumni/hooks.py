@@ -17,7 +17,7 @@ app_include_css = ["/assets/bdalumni/css/bdalumni.css","/assets/bdalumni/css/dat
 app_include_js = ["/assets/bdalumni/js/Sortable.min.js","/assets/bdalumni/js/clusterize.min.js","/assets/bdalumni/js/datable.min.js"]
 
 # include js, css files in header of web template
-web_include_css = "/assets/bdalumni/css/Sortable.min.js"
+web_include_css = "/assets/bdalumni/css/bdalumni_web.css"
 # web_include_js = "/assets/bdalumni/js/bdalumni.js"
 
 
@@ -48,7 +48,7 @@ website_context = {
 
 # website user home page (by Role)
 role_home_page = {
-	"Role": "app/mi-empresa"
+	"Empresa": "/app/mi-empresa"
 }
 
 # Generators
