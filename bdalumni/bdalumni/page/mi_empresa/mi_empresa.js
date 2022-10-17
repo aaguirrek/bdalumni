@@ -87,3 +87,6 @@ function encuestas(){
 function calendario_citas(){
 	frappe.set_route('/app/event/view/calendar/default')
 }
+function webhooks(){
+	frappe.set_route('/app/webhook')
+}

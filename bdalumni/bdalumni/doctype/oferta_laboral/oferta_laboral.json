@@ -14,6 +14,7 @@
   "grado_profesional",
   "experiencia",
   "condicion",
+  "modalidad_de_trabajo",
   "requisitos_adicionales",
   "column_break_7",
   "tipo_de_puesto",
@@ -39,13 +40,18 @@
   {
    "fieldname": "oferta",
    "fieldtype": "Data",
-   "label": "Oferta"
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "T\u00edtulo del Puesto que solicita",
+   "reqd": 1
   },
   {
    "fieldname": "grado_profesional",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Grado profesional",
-   "options": "Profesional ( carrera de 5 a\u00f1os)\nProfesional T\u00e9cnico ( carrera de 3 a\u00f1os)\nT\u00e9cnico Profesional (carrera de 2 a\u00f1os)\nMaestr\u00edas\nDiplomados"
+   "options": "Profesional T\u00e9cnico (carrera de 3 a\u00f1os)\nT\u00e9cnico (carrera de 2 a\u00f1os)\nPrograma de Alta Especializaci\u00f3n (PAE)",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_2",
@@ -55,38 +61,44 @@
   {
    "fieldname": "experiencia",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "A\u00f1os de experiencia",
-   "options": "0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10"
+   "options": "0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10",
+   "reqd": 1
   },
   {
    "fieldname": "condicion",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Condici\u00f3n",
-   "options": "Egresado\nTitulado"
+   "options": "Egresado\nTitulado",
+   "reqd": 1
   },
   {
    "fieldname": "requisitos_adicionales",
    "fieldtype": "Text Editor",
-   "hidden": 1,
    "label": "Requisitos adicionales"
   },
   {
    "fieldname": "tipo_de_puesto",
    "fieldtype": "Select",
    "label": "Tipo de puesto",
-   "options": "Temporal o Por proyecto\nTiempo completo\nTiempo parcial/Medio tiempo\nPracticas profesionales"
+   "options": "Temporal o Por proyecto\nTiempo completo\nTiempo parcial/Medio tiempo\nPracticas profesionales",
+   "reqd": 1
   },
   {
    "fieldname": "postulantes_con_discapacidad",
    "fieldtype": "Select",
    "label": "Postulantes con discapacidad",
-   "options": "Si\nNo"
+   "options": "Si\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "localidad",
    "fieldtype": "Select",
    "label": "Localidad",
-   "options": "Amazonas\n\u00c1ncash\nApur\u00edmac\nArequipa\nAyacucho\nCajamarca\nCallao\nCusco\nHuancavelica\nHu\u00e1nuco\nIca\nJun\u00edn\nLa Libertad\nLambayeque\nLima Metropolitana\nLima (departamento)\nLoreto\nMadre de Dios\nMoquegua\nPasco\nPiura\nPuno\nSan Mart\u00edn\nTacna\nTumbes\nUcayali\nExtranjero"
+   "options": "Amazonas\n\u00c1ncash\nApur\u00edmac\nArequipa\nAyacucho\nCajamarca\nCallao\nCusco\nHuancavelica\nHu\u00e1nuco\nIca\nJun\u00edn\nLa Libertad\nLambayeque\nLima Metropolitana\nLima (departamento)\nLoreto\nMadre de Dios\nMoquegua\nPasco\nPiura\nPuno\nSan Mart\u00edn\nTacna\nTumbes\nUcayali\nExtranjero",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_7",
@@ -96,7 +108,8 @@
    "fieldname": "puestos_sin_frontera",
    "fieldtype": "Select",
    "label": "Puestos sin frontera",
-   "options": "Si\nNo"
+   "options": "Si\nNo",
+   "reqd": 1
   },
   {
    "fieldname": "rango_salarial_section",
@@ -106,7 +119,8 @@
   {
    "fieldname": "desde",
    "fieldtype": "Currency",
-   "label": "Desde"
+   "label": "Desde",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_14",
@@ -126,7 +140,8 @@
    "fieldname": "cv",
    "fieldtype": "Select",
    "label": "Recepci\u00f3n de CVs",
-   "options": "Por correo electr\u00f3nico de contacto\nOtro"
+   "options": "Por correo electr\u00f3nico de contacto\nMediante Webhook (otro sistema)\nMediante el sistema\nOtro",
+   "reqd": 1
   },
   {
    "depends_on": "eval:doc.cv == 'Otro'",
@@ -148,20 +163,24 @@
   {
    "fieldname": "fin_de_publicaci\u00f3n",
    "fieldtype": "Date",
-   "label": "Fin de publicaci\u00f3n "
+   "label": "Fin de publicaci\u00f3n ",
+   "reqd": 1
   },
   {
    "fetch_from": "doc.owner",
    "fieldname": "empresa",
    "fieldtype": "Link",
+   "in_global_search": 1,
    "label": "Empresa",
-   "options": "Empresa"
+   "options": "Empresa",
+   "reqd": 1
   },
   {
    "fetch_from": "empresa.direccion_contacto",
    "fieldname": "contacto_de_la_empresa",
    "fieldtype": "Data",
-   "label": "Contacto de la empresa"
+   "label": "Contacto de la empresa",
+   "reqd": 1
   },
   {
    "fieldname": "descripci\u00f3n",
@@ -179,11 +198,19 @@
   {
    "fieldname": "salto_de_seccion",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "modalidad_de_trabajo",
+   "fieldtype": "Select",
+   "in_global_search": 1,
+   "label": "Modalidad de trabajo",
+   "options": "Presencial\nMixto\nRemoto",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-09-28 17:00:12.566665",
+ "modified": "2022-10-15 14:03:34.424180",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Oferta Laboral",

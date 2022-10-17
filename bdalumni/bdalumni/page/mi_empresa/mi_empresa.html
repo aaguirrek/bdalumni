@@ -1,9 +1,20 @@
 <div class="widget-group ">
-    <div class="widget-group-head">
-        <div class="widget-group-title">Mis atajos</div>
-        <div class="widget-group-control"></div>
-    </div>
     <div class="widget-group-body grid-col-3">
+        
+        <div class="widget widget-shadow shortcut-widget-box bg-primary" data-widget-name="4b2fe117d2" onclick="nueva_oferta()">
+            <div class="widget-head">
+                <div>
+                    <div class="widget-title ellipsis text-white">+ Nueva oferta Laboral</div>
+                    <div class="widget-subtitle text-white"></div>
+                </div>
+                <div class="widget-control text-white"></div>
+            </div>
+            <div class="widget-body">
+            </div>
+            <div class="widget-footer">
+            </div>
+        </div>
+
         <div class="widget widget-shadow shortcut-widget-box" data-widget-name="010db5fe0e" onclick="refresh()">
             <div class="widget-head">
                 <div>
@@ -20,7 +31,7 @@
         <div class="widget widget-shadow shortcut-widget-box" data-widget-name="4b2fe117d2" onclick="Ofertas()">
             <div class="widget-head">
                 <div>
-                    <div class="widget-title ellipsis">Mis Ofertas Laborales</div>
+                    <div class="widget-title ellipsis">Reporte ofertas Laborales</div>
                     <div class="widget-subtitle"></div>
                 </div>
                 <div class="widget-control">
@@ -35,7 +46,7 @@
         <div class="widget widget-shadow shortcut-widget-box" data-widget-name="4b2fe117d2" onclick="Postulaciones()">
             <div class="widget-head">
                 <div>
-                    <div class="widget-title ellipsis">Mis postulantes</div>
+                    <div class="widget-title ellipsis">Reporte dde postulantes</div>
                     <div class="widget-subtitle"></div>
                 </div>
                 <div class="widget-control">
@@ -47,66 +58,10 @@
             <div class="widget-footer">
             </div>
         </div>
-        <div class="widget widget-shadow shortcut-widget-box bg-primary" data-widget-name="4b2fe117d2" onclick="nueva_oferta()">
-            <div class="widget-head">
-                <div>
-                    <div class="widget-title ellipsis text-white">Publica una oferta Laboral</div>
-                    <div class="widget-subtitle text-white"></div>
-                </div>
-                <div class="widget-control text-white"></div>
-            </div>
-            <div class="widget-body">
-            </div>
-            <div class="widget-footer">
-            </div>
-        </div>
     </div>
     <div class="widget-group-head mt-4">
         <div class="widget-group-title"></div>
         <div class="widget-group-control"></div>
-    </div>
-    <div class="widget-group-body grid-col-3">
-        <div class="widget widget-shadow shortcut-widget-box" data-widget-name="010db5fe0e"  onclick="encuestas()">
-            <div class="widget-head">
-                <div>
-                    <div class="widget-title ellipsis">Evaluaciones</div>
-                    <div class="widget-subtitle"></div>
-                </div>
-                <div class="widget-control"></div>
-            </div>
-            <div class="widget-body">
-            </div>
-            <div class="widget-footer">
-            </div>
-        </div>
-        <div class="widget widget-shadow shortcut-widget-box" data-widget-name="4b2fe117d2" onclick="encuestas()">
-            <div class="widget-head">
-                <div>
-                    <div class="widget-title ellipsis">Encuestas</div>
-                    <div class="widget-subtitle"></div>
-                </div>
-                <div class="widget-control"></div>
-            </div>
-            <div class="widget-body">
-            </div>
-            <div class="widget-footer">
-            </div>
-        </div>
-        <div class="widget widget-shadow shortcut-widget-box" data-widget-name="4b2fe117d2" onclick="calendario_citas()">
-            <div class="widget-head">
-                <div>
-                    <div class="widget-title ellipsis">Calendario de citas</div>
-                    <div class="widget-subtitle text-white"></div>
-                </div>
-                <div class="widget-control">
-                    <div class="indicator-pill ellipsis gray">0 Citas hoy</div>
-                </div>
-            </div>
-            <div class="widget-body">
-            </div>
-            <div class="widget-footer">
-            </div>
-        </div>
     </div>
     <div class="widget-group-head mt-4">
         <div class="widget-group-title">Mis anuncios</div>
@@ -137,3 +92,72 @@
 
 
 <div class="dashboard-graph"><div class="widget-group "> <div class="widget-group-head"> <div class="widget-group-control"></div> </div> <div class="widget-group-body grid-col-2"><div class="widget widget-shadow dashboard-widget-box" data-widget-name="c91cd63450"> <div class="widget-head"> <div> <div class="widget-title ellipsis" title="Ofetas Laborales">Ofetas Laborales</div> <div class="widget-subtitle">Última sincronización <span class="frappe-timestamp " data-timestamp="2022-09-29 08:37:20.822301" title="29-09-2022 08:37:20">Hace 36 minutos</span></div> </div> <div class="widget-control"><div class="chart-actions dropdown pull-right"> <button data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-xs btn-secondary chart-menu"> <svg class="icon icon-sm"> <use href="#icon-dot-horizontal"> </use> </svg> </button> <ul class="dropdown-menu dropdown-menu-right"> <li><a class="dropdown-item" data-action="action-refresh">Actualizar</a></li><li><a class="dropdown-item" data-action="action-edit">Editar</a></li><li><a class="dropdown-item" data-action="action-reset">Restablecer gráfico</a></li><li><a class="dropdown-item" data-action="action-list">Lista Oferta Laboral</a></li> </ul> </div><div class="chart-actions time-interval-filter btn-group dropdown pull-right"> <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <button class="btn btn-secondary btn-xs"> <svg class="icon icon-sm" style=""> <use class="" href="#icon-calendar"></use> </svg> <span class="filter-label">Yearly</span> <svg class="icon icon-xs" style=""> <use class="" href="#icon-select"></use> </svg> </button> </a><ul class="dropdown-menu"><li><a class="dropdown-item">Yearly</a></li><li><a class="dropdown-item">Quarterly</a></li><li><a class="dropdown-item">Monthly</a></li><li><a class="dropdown-item">Weekly</a></li><li><a class="dropdown-item">Daily</a></li></ul></div><div class="chart-actions timespan-filter btn-group dropdown pull-right"> <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <button class="btn btn-secondary btn-xs"> <span class="filter-label">Last Year</span> <svg class="icon icon-xs" style=""> <use class="" href="#icon-select"></use> </svg> </button> </a><ul class="dropdown-menu"><li><a class="dropdown-item">Select Date Range</a></li><li><a class="dropdown-item">Last Year</a></li><li><a class="dropdown-item">Last Quarter</a></li><li><a class="dropdown-item">Last Month</a></li><li><a class="dropdown-item">Last Week</a></li></ul></div><div class="filter-chart btn btn-xs pull-right" data-original-title="" title=""> <svg class="icon icon-sm" style=""> <use class="" href="#icon-filter"></use> </svg> </div></div> </div> <div class="widget-body"><div class="chart-loading-state text-muted" style="height: 240px; display: none;">Cargando ...</div><div class="chart-loading-state text-muted" style="height: 240px; display: none;">No hay datos</div><div><div class="chart-container"><div class="graph-svg-tip comparison" style="top: 0px; left: 0px; opacity: 0;"><span class="title"></span> <ul class="data-point-list"></ul> <div class="svg-pointer"></div></div><svg class="frappe-chart chart" width="758" height="240"><defs></defs><g class="line-chart chart-draw-area" transform="translate(50, 30)"><g class="y axis" transform=""><g transform="translate(0, 170)" stroke-opacity="1"><line class="line-horizontal " x1="-6" x2="684" y1="0" y2="0"></line><text x="-10" y="0" dy="3px" font-size="10px" text-anchor="end">0</text></g><g transform="translate(0, 127.5)" stroke-opacity="1"><line class="line-horizontal " x1="-6" x2="684" y1="0" y2="0"></line><text x="-10" y="0" dy="3px" font-size="10px" text-anchor="end">0.5</text></g><g transform="translate(0, 85)" stroke-opacity="1"><line class="line-horizontal " x1="-6" x2="684" y1="0" y2="0"></line><text x="-10" y="0" dy="3px" font-size="10px" text-anchor="end">1</text></g><g transform="translate(0, 42.5)" stroke-opacity="1"><line class="line-horizontal " x1="-6" x2="684" y1="0" y2="0"></line><text x="-10" y="0" dy="3px" font-size="10px" text-anchor="end">1.5</text></g><g transform="translate(0, 0)" stroke-opacity="1"><line class="line-horizontal " x1="-6" x2="684" y1="0" y2="0"></line><text x="-10" y="0" dy="3px" font-size="10px" text-anchor="end">2</text></g></g><g class="x axis" transform=""><g transform="translate(169.5, 0)"><line class="line-vertical " x1="0" x2="0" y1="176" y2="170"></line><text x="0" y="180" dy="10px" font-size="10px" text-anchor="middle">2021</text></g><g transform="translate(508.5, 0)"><line class="line-vertical " x1="0" x2="0" y1="176" y2="170"></line><text x="0" y="180" dy="10px" font-size="10px" text-anchor="middle">2022</text></g></g><g class="dataset-units dataset-line dataset-0" transform=""><path class="line-graph-path" d="M169.5,170L508.5,0" style="stroke: rgb(118, 26, 203); fill: none; stroke-width: 2;"></path></g></g></svg></div></div></div> <div class="widget-footer"> </div> </div><div class="widget widget-shadow dashboard-widget-box" data-widget-name="bb803131bf"> <div class="widget-head"> <div> <div class="widget-title ellipsis" title="Ofertas por Terminar">Ofertas por Terminar</div> <div class="widget-subtitle">Última sincronización <span class="frappe-timestamp " data-timestamp="2022-09-29 08:37:21.952705" title="29-09-2022 08:37:21">Hace 36 minutos</span></div> </div> <div class="widget-control"><div class="chart-actions dropdown pull-right"> <button data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-xs btn-secondary chart-menu"> <svg class="icon icon-sm"> <use href="#icon-dot-horizontal"> </use> </svg> </button> <ul class="dropdown-menu dropdown-menu-right"> <li><a class="dropdown-item" data-action="action-refresh">Actualizar</a></li><li><a class="dropdown-item" data-action="action-edit">Editar</a></li><li><a class="dropdown-item" data-action="action-reset">Restablecer gráfico</a></li><li><a class="dropdown-item" data-action="action-list">Lista Oferta Laboral</a></li> </ul> </div><div class="chart-actions time-interval-filter btn-group dropdown pull-right"> <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <button class="btn btn-secondary btn-xs"> <svg class="icon icon-sm" style=""> <use class="" href="#icon-calendar"></use> </svg> <span class="filter-label">Yearly</span> <svg class="icon icon-xs" style=""> <use class="" href="#icon-select"></use> </svg> </button> </a><ul class="dropdown-menu"><li><a class="dropdown-item">Yearly</a></li><li><a class="dropdown-item">Quarterly</a></li><li><a class="dropdown-item">Monthly</a></li><li><a class="dropdown-item">Weekly</a></li><li><a class="dropdown-item">Daily</a></li></ul></div><div class="chart-actions timespan-filter btn-group dropdown pull-right"> <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <button class="btn btn-secondary btn-xs"> <span class="filter-label">Last Year</span> <svg class="icon icon-xs" style=""> <use class="" href="#icon-select"></use> </svg> </button> </a><ul class="dropdown-menu"><li><a class="dropdown-item">Select Date Range</a></li><li><a class="dropdown-item">Last Year</a></li><li><a class="dropdown-item">Last Quarter</a></li><li><a class="dropdown-item">Last Month</a></li><li><a class="dropdown-item">Last Week</a></li></ul></div><div class="filter-chart btn btn-xs pull-right" data-original-title="" title=""> <svg class="icon icon-sm" style=""> <use class="" href="#icon-filter"></use> </svg> </div></div> </div> <div class="widget-body"><div class="chart-loading-state text-muted" style="height: 240px; display: none;">Cargando ...</div><div class="chart-loading-state text-muted" style="height: 240px; display: none;">No hay datos</div><div><div class="chart-container"><div class="graph-svg-tip comparison" style="top: 0px; left: 0px; opacity: 0;"><span class="title"></span> <ul class="data-point-list"></ul> <div class="svg-pointer"></div></div><svg class="frappe-chart chart" width="758" height="240"><defs></defs><g class="line-chart chart-draw-area" transform="translate(50, 30)"><g class="y axis" transform=""><g transform="translate(0, 170)" stroke-opacity="1"><line class="line-horizontal " x1="-6" x2="684" y1="0" y2="0"></line><text x="-10" y="0" dy="3px" font-size="10px" text-anchor="end">0</text></g><g transform="translate(0, 136)" stroke-opacity="1"><line class="line-horizontal " x1="-6" x2="684" y1="0" y2="0"></line><text x="-10" y="0" dy="3px" font-size="10px" text-anchor="end">1</text></g><g transform="translate(0, 102)" stroke-opacity="1"><line class="line-horizontal " x1="-6" x2="684" y1="0" y2="0"></line><text x="-10" y="0" dy="3px" font-size="10px" text-anchor="end">2</text></g><g transform="translate(0, 68)" stroke-opacity="1"><line class="line-horizontal " x1="-6" x2="684" y1="0" y2="0"></line><text x="-10" y="0" dy="3px" font-size="10px" text-anchor="end">3</text></g><g transform="translate(0, 34)" stroke-opacity="1"><line class="line-horizontal " x1="-6" x2="684" y1="0" y2="0"></line><text x="-10" y="0" dy="3px" font-size="10px" text-anchor="end">4</text></g><g transform="translate(0, 0)" stroke-opacity="1"><line class="line-horizontal " x1="-6" x2="684" y1="0" y2="0"></line><text x="-10" y="0" dy="3px" font-size="10px" text-anchor="end">5</text></g></g><g class="x axis" transform=""><g transform="translate(169.5, 0)"><line class="line-vertical " x1="0" x2="0" y1="176" y2="170"></line><text x="0" y="180" dy="10px" font-size="10px" text-anchor="middle">2021</text></g><g transform="translate(508.5, 0)"><line class="line-vertical " x1="0" x2="0" y1="176" y2="170"></line><text x="0" y="180" dy="10px" font-size="10px" text-anchor="middle">2022</text></g></g><g class="dataset-units dataset-line dataset-0" transform=""><path class="line-graph-path" d="M169.5,170L508.5,170" style="stroke: rgb(203, 41, 41); fill: none; stroke-width: 2;"></path></g></g></svg></div></div></div> <div class="widget-footer"> </div> </div></div> </div></div>
+
+
+
+
+
+<div class="widget-group">
+    
+    <div class="widget-group-head">
+        <div class="widget-group-title">Mis atajos</div>
+        <div class="widget-group-control"></div>
+    </div>
+<div class="widget-group-body grid-col-3">
+    <div class="widget widget-shadow shortcut-widget-box" data-widget-name="010db5fe0e"  onclick="encuestas()">
+        <div class="widget-head">
+            <div>
+                <div class="widget-title ellipsis">Evaluaciones</div>
+                <div class="widget-subtitle"></div>
+            </div>
+            <div class="widget-control"></div>
+        </div>
+        <div class="widget-body">
+        </div>
+        <div class="widget-footer">
+        </div>
+    </div>
+    <div class="widget widget-shadow shortcut-widget-box" data-widget-name="4b2fe117d2" onclick="encuestas()">
+        <div class="widget-head">
+            <div>
+                <div class="widget-title ellipsis">Encuestas</div>
+                <div class="widget-subtitle"></div>
+            </div>
+            <div class="widget-control"></div>
+        </div>
+        <div class="widget-body">
+        </div>
+        <div class="widget-footer">
+        </div>
+    </div>
+    <div class="widget widget-shadow shortcut-widget-box" data-widget-name="4b2fe117d2" onclick="calendario_citas()">
+        <div class="widget-head">
+            <div>
+                <div class="widget-title ellipsis">Calendario de citas</div>
+                <div class="widget-subtitle text-white"></div>
+            </div>
+            <div class="widget-control">
+                <div class="indicator-pill ellipsis gray">0 Citas hoy</div>
+            </div>
+        </div>
+        <div class="widget-body">
+        </div>
+        <div class="widget-footer">
+        </div>
+    </div>
+    <div class="widget widget-shadow shortcut-widget-box" data-widget-name="4b2fe117d2" onclick="webhooks()">
+        <div class="widget-head">
+            <div>
+                <div class="widget-title ellipsis">Desarrolladores Api Webhooks</div>
+                <div class="widget-subtitle text-white"></div>
+            </div>
+            <div class="widget-control">
+                </div>
+        </div>
+        <div class="widget-body">
+        </div>
+        <div class="widget-footer">
+        </div>
+    </div>
+</div>
+</div>

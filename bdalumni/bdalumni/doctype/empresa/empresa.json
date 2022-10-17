@@ -56,13 +56,19 @@
    "fieldtype": "Section Break"
   },
   {
+   "bold": 1,
    "fieldname": "ruc",
    "fieldtype": "Data",
-   "label": "RUC"
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "RUC",
+   "search_index": 1
   },
   {
    "fieldname": "razon_social",
    "fieldtype": "Data",
+   "in_global_search": 1,
    "label": "Raz\u00f3n Social",
    "unique": 1
   },
@@ -89,11 +95,13 @@
   {
    "fieldname": "nombres",
    "fieldtype": "Data",
+   "in_global_search": 1,
    "label": "Nombres"
   },
   {
    "fieldname": "apellidos",
    "fieldtype": "Data",
+   "in_global_search": 1,
    "label": "Apellidos"
   },
   {
@@ -173,7 +181,7 @@
  "image_field": "logo",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-09-19 16:34:41.181779",
+ "modified": "2022-10-15 14:06:50.179503",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Empresa",
@@ -205,6 +213,7 @@
    "write": 1
   }
  ],
+ "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC"
 }
