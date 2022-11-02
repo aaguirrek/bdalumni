@@ -41,20 +41,23 @@
    "in_standard_filter": 1,
    "label": "Oferta laboral",
    "options": "Oferta Laboral",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "exalumno",
    "fieldtype": "Link",
-   "label": "Exalumno",
-   "options": "Perfil del exalumno"
+   "label": "Egresado",
+   "options": "Perfil del exalumno",
+   "read_only_depends_on": "eval: doc.exalumno!=\"\""
   },
   {
    "fieldname": "cv",
    "fieldtype": "Attach",
    "in_preview": 1,
    "label": "Cv",
-   "search_index": 1
+   "search_index": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "cumplimiento",
@@ -64,18 +67,21 @@
   {
    "fieldname": "carrera",
    "fieldtype": "Data",
-   "label": "Carrera"
+   "label": "Carrera",
+   "read_only_depends_on": "eval: doc.carrera!=\"\""
   },
   {
    "fieldname": "conocimientos",
    "fieldtype": "Data",
-   "label": "Conocimientos t\u00e9cnicos"
+   "label": "Conocimientos t\u00e9cnicos",
+   "read_only_depends_on": "eval: doc.conocimientos!=\"\""
   },
   {
    "bold": 1,
    "default": "En espera",
    "fieldname": "status",
    "fieldtype": "Select",
+   "ignore_user_permissions": 1,
    "in_list_view": 1,
    "in_preview": 1,
    "in_standard_filter": 1,
@@ -97,7 +103,8 @@
    "fieldtype": "Link",
    "label": "Empresa",
    "options": "Empresa",
-   "read_only": 1
+   "read_only": 1,
+   "set_only_once": 1
   },
   {
    "allow_in_quick_entry": 1,
@@ -114,7 +121,8 @@
   {
    "fieldname": "data_8",
    "fieldtype": "Section Break",
-   "label": "Datos enviados"
+   "label": "Datos enviados",
+   "set_only_once": 1
   },
   {
    "collapsible": 1,
@@ -180,11 +188,13 @@
    "fieldname": "resumen",
    "fieldtype": "Long Text",
    "label": "Resumen",
-   "read_only": 1
+   "read_only": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "column_break_11",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "set_only_once": 1
   },
   {
    "fetch_from": "oferta_laboral.oferta",
@@ -194,16 +204,18 @@
    "in_list_view": 1,
    "in_preview": 1,
    "in_standard_filter": 1,
-   "label": "Nombre de la oferta labora"
+   "label": "Nombre de la oferta labora",
+   "set_only_once": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-09-29 08:40:17.715409",
+ "modified": "2022-10-26 13:29:27.598445",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Postulacion",
  "name_case": "Title Case",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -232,8 +244,6 @@
    "write": 1
   },
   {
-   "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -246,6 +256,7 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "title_field": "oferta_laboral",
  "track_changes": 1,
  "track_seen": 1

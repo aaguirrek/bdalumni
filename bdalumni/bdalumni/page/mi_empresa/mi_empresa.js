@@ -4,36 +4,43 @@ frappe.pages['mi-empresa'].on_page_load = function(wrapper) {
 		title: 'Bienvenido Evolution Soluciones',
 		single_column: true
 	});
-	const template = frappe.render_template("mi_empresa", {} );
-	$('[data-page-route="mi-empresa"] .page-content').html(template).ready(function () {
-		setTimeout(function(){
-			frappe.call({method:"frappe.client.get_list",args:{doctype:"Oferta Laboral",fields:["oferta","desde","hasta","fin_de_publicación","localidad","tipo_de_puesto","name"]},callback:function(e){
-				var data=[]
-				for (const key in e.message) {
-					if (Object.hasOwnProperty.call(e.message, key)) {
-						const element = e.message[key];
-						var datapush=[]
-						datapush.push(element.oferta)
-						datapush.push(element.desde)
-						datapush.push(element.hasta)
-						datapush.push(element["fin_de_publicación"])
-						datapush.push(element.localidad)
-						datapush.push(element.tipo_de_puesto)
-						datapush.push(
-						`
-						<a class="btn btn-primary btn-sm primary-action shadow-sm" onclick="editar_oferta('${element.name}')">Editar</a> 
-						<a class="btn btn-danger btn-sm primary-action shadow-sm" onclick="desactivar_oferta('${element.name}')">Desactivar</a> 
-						<a class="btn btn-default btn-sm primary-action shadow-sm" onclick="postulantes_oferta('${element.name}')">Ver Postulantes</a>
-						`);
-					}
-					data.push(datapush)
-					
-				}
-
-				// ['Manas', 'Software Engineer', '$1400','],
-				
+	
+	frappe.db.count('Oferta Laboral').then(counts => {
+	const template = frappe.render_template("mi_empresa", {postulaciones:counts} );
+		$('[data-page-route="mi-empresa"] .page-content').html(template).ready(function () {
+			setTimeout(function(){
 				const datatable = new DataTable('#datatable', {
-					columns: ["Nombre","Desde","Hasta","Fin de Publicación","Localidad","Tipo de puesto",
+			
+					columns: [
+						{
+							name:"Nombre",
+							editable: false
+						},
+						{
+							name:"Vencimiento",
+							editable: false
+						},
+						{
+							name:"Estado",
+							editable: false
+						},
+						{
+							name:"Postulantes",
+							editable: false,
+							width: 70
+						},
+						{
+							name:"Localidad",
+							editable: false
+						},
+						{
+							name:"Tipo de puesto",
+							editable: false
+						},
+						{
+							name:"Publicado por",
+							editable: false
+						},
 					{
 						name: "Acciones",
 						id: "acciones",
@@ -44,16 +51,51 @@ frappe.pages['mi-empresa'].on_page_load = function(wrapper) {
 						dropdown: false,
 						width: 300
 					}],
-					data:data,
+					data:[],
 					checkboxColumn: true,
 					inlineFilters: true,
 					layout: "fluid"
-				  });
-			}
-			})
-			
-		},500)
-	});;
+				});
+				frappe.call({method:"frappe.client.get_list",args:{doctype:"Oferta Laboral",fields:["oferta","owner","hasta","fin_de_publicación","localidad","tipo_de_puesto","name"]},callback:function(e){
+					var data=[]
+					for (const key in e.message) {
+						if (Object.hasOwnProperty.call(e.message, key)) {
+							const element = e.message[key];
+							frappe.db.count('Postulacion', { oferta_laboral: element.name }).then(count => {
+								var datapush=[]
+									console.log(count)
+									datapush.push(`<a onclick="editar_oferta('${element.name}') "> ${element.oferta}</a>`)
+									datapush.push(`<a onclick="editar_oferta('${element.name}') ">${element["fin_de_publicación"]} </a>`)
+									datapush.push(`<a onclick="editar_oferta('${element.name}') " class="badge badge-success text-regular text-white m-auto">Activo</a>`)
+									datapush.push(`<a onclick="postulantes_oferta('${element.name}') "><i class="octicon octicon-person"></i> ${count} </a>`)
+									datapush.push(`<a onclick="editar_oferta('${element.name}') ">${element.localidad} </a>`)
+									datapush.push(`<a onclick="editar_oferta('${element.name}') ">${element.tipo_de_puesto} </a>`)
+									datapush.push(`<a onclick="editar_oferta('${element.name}') ">${element.owner} </a>`)
+									datapush.push(
+									`
+									<a class="btn btn-danger btn-sm primary-action shadow-sm" onclick="desactivar_oferta('${element.name}')">Desactivar</a> 
+									<a class="btn btn-default btn-sm primary-action shadow-sm" onclick="postulantes_oferta('${element.name}')">Ver Postulantes</a>
+									`);
+									data.push(datapush)	
+									datatable.refresh(data);
+
+								})
+
+							
+							}
+							
+						}
+					
+
+					// ['Manas', 'Software Engineer', '$1400','],
+					
+				
+				}
+				})
+				
+			},500)
+	});
+});
 	
 
 }
@@ -68,7 +110,7 @@ function refresh(){
 	frappe.set_route("/empresa/Evolution Soluiones EIRL");
 }
 function Postulaciones(){
-	frappe.set_route("/app/postulacion/view/kanban/Postulacion");
+	frappe.set_route("/app/postulacion");
 }
 function Ofertas(){
 	frappe.set_route("/app/oferta-laboral");

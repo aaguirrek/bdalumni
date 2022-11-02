@@ -181,10 +181,11 @@
  "image_field": "logo",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-10-15 14:06:50.179503",
+ "modified": "2022-10-26 13:31:31.406106",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Empresa",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -200,8 +201,6 @@
    "write": 1
   },
   {
-   "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "if_owner": 1,
@@ -215,5 +214,6 @@
  ],
  "show_name_in_global_search": 1,
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "states": []
 }

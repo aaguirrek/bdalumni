@@ -13,8 +13,8 @@ app_license = "MIT"
 # ------------------
 
 # include js, css files in header of desk.html
-app_include_css = ["/assets/bdalumni/css/bdalumni.css","/assets/bdalumni/css/datatable.min.css"]
-app_include_js = ["/assets/bdalumni/js/Sortable.min.js","/assets/bdalumni/js/clusterize.min.js","/assets/bdalumni/js/datable.min.js"]
+app_include_css = ["/assets/bdalumni/css/bdalumni.css"]
+app_include_js = ["/assets/bdalumni/js/app.js"]
 
 # include js, css files in header of web template
 web_include_css = "/assets/bdalumni/css/bdalumni_web.css"
@@ -47,9 +47,9 @@ website_context = {
 # home_page = "login"
 
 # website user home page (by Role)
-role_home_page = {
-	"Empresa": "/app/mi-empresa"
-}
+#role_home_page = {
+	#"Empresa": "/app/mi-empresa"
+#}
 
 # Generators
 # ----------
@@ -179,9 +179,9 @@ user_data_fields = [
 # Authentication and authorization
 # --------------------------------
 
-# auth_hooks = [
-# 	"bdalumni.auth.validate"
-# ]
+#auth_hooks = [
+ 	#"bdalumni.auth.redirect_after_login"
+#]
 
 # Translation
 # --------------------------------

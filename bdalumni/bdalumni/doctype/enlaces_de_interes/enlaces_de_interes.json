@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2022-10-18 12:49:06.774481",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "nombre_de_enlace",
+  "url",
+  "column_break_3",
+  "breve_descripci\u00f3n",
+  "icono"
+ ],
+ "fields": [
+  {
+   "fieldname": "nombre_de_enlace",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre de enlace",
+   "reqd": 1
+  },
+  {
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "url",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "breve_descripci\u00f3n",
+   "fieldtype": "Text Editor",
+   "label": "breve descripci\u00f3n"
+  },
+  {
+   "fieldname": "icono",
+   "fieldtype": "Icon",
+   "label": "icono"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-10-18 12:54:06.003053",
+ "modified_by": "Administrator",
+ "module": "Bdalumni",
+ "name": "Enlaces de interes",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
