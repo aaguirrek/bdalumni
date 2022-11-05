@@ -52,6 +52,7 @@ def create( email, nombre, apellido, pwd,ruc ):
 					"send_welcome_email":0,
 					"thread_notify":0,
 					"role_profile_name": "Empresa",
+					"module_profile":"Empresa",
 					"new_password":pwd,
 					"user_type":"System User"
 	})
@@ -62,3 +63,7 @@ def create( email, nombre, apellido, pwd,ruc ):
 	pass
 
 
+def ofertas(user):
+	if not user:
+		user = frappe.session.user
+	return "(`tabOferta Laboral`.owner = {user} or `tabOferta Laboral`.assigned_by = {user})".format(user=user)

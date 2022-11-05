@@ -13,7 +13,7 @@ body:not([data-route^="Workspaces"])
     display: none;
 }
 
-li.nav-item.dropdown.dropdown-help.dropdown-mobile.d-none.d-lg-block {
+li.nav-item.dropdown.dropdown-help.dropdown-mobile.d-none.d-lg-block,.chat-bubble {
     display: none!important;
 }
 

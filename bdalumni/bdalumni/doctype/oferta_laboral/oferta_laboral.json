@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "FORMAT:EMP-{YYYY}-{MM}-{#####}",
  "creation": "2022-09-19 11:05:42.797278",
@@ -49,8 +50,8 @@
    "fieldname": "grado_profesional",
    "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "Grado profesional",
-   "options": "Profesional T\u00e9cnico (carrera de 3 a\u00f1os)\nT\u00e9cnico (carrera de 2 a\u00f1os)\nPrograma de Alta Especializaci\u00f3n (PAE)",
+   "label": "Carrera",
+   "options": "Carrera de 3 a\u00f1os\nCarrera de 2 a\u00f1os\nDiplomados\nPrograma de Alta Especializaci\u00f3n (PAE)",
    "reqd": 1
   },
   {
@@ -140,7 +141,7 @@
    "fieldname": "cv",
    "fieldtype": "Select",
    "label": "Recepci\u00f3n de CVs",
-   "options": "Por correo electr\u00f3nico de contacto\nMediante Webhook (otro sistema)\nMediante el sistema\nOtro",
+   "options": "Por correo electr\u00f3nico de contacto\nMediante la plataforma (no notifica por correo)\nMediante Webhook para desarrolladores (otro sistema)\nOtro",
    "reqd": 1
   },
   {
@@ -183,9 +184,10 @@
    "reqd": 1
   },
   {
+   "description": "describa las funciones",
    "fieldname": "descripci\u00f3n",
    "fieldtype": "Text Editor",
-   "label": "Descripci\u00f3n"
+   "label": "Descripci\u00f3n del puesto"
   },
   {
    "fieldname": "column_break_23",
@@ -208,13 +210,13 @@
    "reqd": 1
   }
  ],
- "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-10-15 14:03:34.424180",
+ "modified": "2022-11-02 12:30:23.580637",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Oferta Laboral",
  "name_case": "Title Case",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -235,6 +237,7 @@
    "email": 1,
    "export": 1,
    "if_owner": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,
@@ -248,11 +251,12 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "Guest",
+   "role": "Exalumno",
    "share": 1
   }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "title_field": "oferta"
 }

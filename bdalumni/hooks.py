@@ -24,6 +24,10 @@ web_include_css = "/assets/bdalumni/css/bdalumni_web.css"
 website_context = {
 	"splash_image": "/assets/bdalumni/images/evolution.svg",
 }
+
+permission_query_conditions = {
+    "ToDo": "bdalumni.api.ofertas",
+}
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "bdalumni/public/scss/website"
 

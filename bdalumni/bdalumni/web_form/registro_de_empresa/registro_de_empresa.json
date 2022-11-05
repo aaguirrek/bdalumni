@@ -19,7 +19,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2022-10-27 12:24:25.571049",
+ "modified": "2022-11-02 12:05:34.835722",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "registro-de-empresa",
@@ -283,7 +283,7 @@
   {
    "allow_read_on_all_link_options": 0,
    "fieldname": "",
-   "fieldtype": "Section Break",
+   "fieldtype": "Page Break",
    "hidden": 0,
    "label": "Redes Sociales",
    "max_length": 0,
