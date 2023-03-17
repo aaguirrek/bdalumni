@@ -13,15 +13,21 @@
   "descripci\u00f3n",
   "section_break_2",
   "grado_profesional",
+  "3anios",
+  "2anios",
+  "diplomados",
+  "altaespecializacion",
   "experiencia",
   "condicion",
   "modalidad_de_trabajo",
   "requisitos_adicionales",
   "column_break_7",
+  "nombre_de_carrera",
   "tipo_de_puesto",
   "postulantes_con_discapacidad",
   "localidad",
   "puestos_sin_frontera",
+  "vacantes",
   "rango_salarial_section",
   "desde",
   "column_break_14",
@@ -29,13 +35,17 @@
   "recepci\u00f3n_del_cv_section",
   "cv",
   "column_break_19",
+  "externo",
   "correo_receppcion",
   "section_break_19",
   "fecha_de_publicaci\u00f3n",
   "empresa",
+  "visible",
   "column_break_23",
   "fin_de_publicaci\u00f3n",
-  "contacto_de_la_empresa"
+  "contacto_de_la_empresa",
+  "logo_empresa",
+  "amended_from"
  ],
  "fields": [
   {
@@ -49,10 +59,10 @@
   {
    "fieldname": "grado_profesional",
    "fieldtype": "Select",
+   "hidden": 1,
    "in_list_view": 1,
    "label": "Carrera",
-   "options": "Carrera de 3 a\u00f1os\nCarrera de 2 a\u00f1os\nDiplomados\nPrograma de Alta Especializaci\u00f3n (PAE)",
-   "reqd": 1
+   "options": "T\u00e9cnico Profesional (Carrera de 3 a\u00f1os)\nT\u00e9cnico (Carrera de 2 a\u00f1os)\nDiplomados\nPrograma de Alta Especializaci\u00f3n (PAE)"
   },
   {
    "fieldname": "section_break_2",
@@ -64,7 +74,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "A\u00f1os de experiencia",
-   "options": "0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10",
+   "options": "0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n10 a m\u00e1s",
    "reqd": 1
   },
   {
@@ -141,11 +151,11 @@
    "fieldname": "cv",
    "fieldtype": "Select",
    "label": "Recepci\u00f3n de CVs",
-   "options": "Por correo electr\u00f3nico de contacto\nMediante la plataforma (no notifica por correo)\nMediante Webhook para desarrolladores (otro sistema)\nOtro",
+   "options": "Por correo electr\u00f3nico de contacto\nMediante la plataforma (no notifica por correo)\nMediante Webhook para desarrolladores (otro sistema)\nOtro correo\nPostulaci\u00f3n Externa",
    "reqd": 1
   },
   {
-   "depends_on": "eval:doc.cv == 'Otro'",
+   "depends_on": "eval:doc.cv == 'Otro correo'",
    "fieldname": "correo_receppcion",
    "fieldtype": "Data",
    "label": "Correo de receppci\u00f3n",
@@ -208,10 +218,74 @@
    "label": "Modalidad de trabajo",
    "options": "Presencial\nMixto\nRemoto",
    "reqd": 1
+  },
+  {
+   "fieldname": "nombre_de_carrera",
+   "fieldtype": "Table MultiSelect",
+   "label": "Nombre de carrera",
+   "options": "Nombre de carrera tabla"
+  },
+  {
+   "fetch_from": "empresa.logo",
+   "fieldname": "logo_empresa",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "logo_empresa"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Oferta Laboral",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "3anios",
+   "fieldtype": "Check",
+   "label": "T\u00e9cnico Profesional (Carrera de 3 a\u00f1os)"
+  },
+  {
+   "default": "0",
+   "fieldname": "2anios",
+   "fieldtype": "Check",
+   "label": "T\u00e9cnico (Carrera de 2 a\u00f1os)"
+  },
+  {
+   "default": "0",
+   "fieldname": "diplomados",
+   "fieldtype": "Check",
+   "label": "Diplomados"
+  },
+  {
+   "default": "0",
+   "fieldname": "altaespecializacion",
+   "fieldtype": "Check",
+   "label": "Programa de Alta Especializaci\u00f3n (PAE)"
+  },
+  {
+   "depends_on": "eval:doc.cv == 'Postulaci\u00f3n Externa'",
+   "fieldname": "externo",
+   "fieldtype": "Data",
+   "label": "Enlace de p\u00e1gina de postulacion"
+  },
+  {
+   "fieldname": "vacantes",
+   "fieldtype": "Int",
+   "label": "Vacantes"
+  },
+  {
+   "default": "0",
+   "fieldname": "visible",
+   "fieldtype": "Check",
+   "label": "Mostrar como confidencial el nombre de la empresa"
   }
  ],
+ "is_submittable": 1,
  "links": [],
- "modified": "2022-11-02 12:30:23.580637",
+ "modified": "2023-01-13 12:22:08.454271",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Oferta Laboral",
@@ -229,9 +303,12 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "submit": 1,
    "write": 1
   },
   {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -242,17 +319,10 @@
    "read": 1,
    "report": 1,
    "role": "Empresa",
+   "select": 1,
    "share": 1,
+   "submit": 1,
    "write": 1
-  },
-  {
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Exalumno",
-   "share": 1
   }
  ],
  "sort_field": "modified",

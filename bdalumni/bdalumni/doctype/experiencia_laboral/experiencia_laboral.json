@@ -8,9 +8,11 @@
  "field_order": [
   "logo_de_la_empresa",
   "nombre_de_la_empresa",
-  "cargo",
   "desde",
-  "hasta"
+  "hasta",
+  "cargo",
+  "funciones",
+  "logros"
  ],
  "fields": [
   {
@@ -22,36 +24,50 @@
    "fieldname": "nombre_de_la_empresa",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Nombre de la empresa"
+   "label": "Nombre de la empresa",
+   "reqd": 1
   },
   {
    "fieldname": "cargo",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "cargo"
+   "label": "Cargo",
+   "reqd": 1
   },
   {
    "fieldname": "desde",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "Desde"
+   "label": "Inicio de labores en la empresa",
+   "reqd": 1
   },
   {
    "fieldname": "hasta",
    "fieldtype": "Date",
    "in_list_view": 1,
-   "label": "hasta"
+   "label": "Fin de labores en la empresa"
+  },
+  {
+   "fieldname": "funciones",
+   "fieldtype": "Small Text",
+   "label": "Funciones"
+  },
+  {
+   "fieldname": "logros",
+   "fieldtype": "Small Text",
+   "label": "Logros"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2022-09-05 17:36:38.403901",
+ "modified": "2022-12-05 21:42:47.528274",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Experiencia laboral",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "states": []
 }

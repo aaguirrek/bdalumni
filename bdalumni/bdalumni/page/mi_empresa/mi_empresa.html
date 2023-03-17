@@ -1,4 +1,5 @@
 <div class="widget-group ">
+    <img src="/fondotecsup2.png" style="position: fixed;z-index: -1;left: 0;top: 0;min-height: 100vh;min-width: 100vw;">
     <div class="widget-group-body grid-col-3">
         
         <div class="widget widget-shadow shortcut-widget-box bg-primary" data-widget-name="4b2fe117d2" onclick="nueva_oferta()">
@@ -15,10 +16,10 @@
             </div>
         </div>
 
-        <div class="widget widget-shadow shortcut-widget-box" data-widget-name="010db5fe0e" onclick="refresh()">
+        <div class="widget widget-shadow shortcut-widget-box" data-widget-name="010db5fe0e" onclick="miEmpresa()">
             <div class="widget-head">
                 <div>
-                    <div class="widget-title ellipsis">Mis datos de empresa</div>
+                    <div class="widget-title ellipsis">Datos de mi empresa</div>
                     <div class="widget-subtitle"></div>
                 </div>
                 <div class="widget-control"></div>
@@ -35,7 +36,7 @@
                     <div class="widget-subtitle"></div>
                 </div>
                 <div class="widget-control">
-                    <div class="indicator-pill ellipsis green">{{postulaciones}} activas</div>
+                    <div class="indicator-pill ellipsis orange">{{postulaciones}} en borrador</div>
                 </div>
             </div>
             <div class="widget-body">
@@ -102,21 +103,49 @@
         <div class="widget-group-control"></div>
     </div>
     <div class="widget-group-body grid-col-3">
-    <div class="widget widget-shadow shortcut-widget-box" data-widget-name="4b2fe117d2" >
-        <div class="widget-head">
-            <div>
-                <div class="widget-title ellipsis"><h4>Feria Alumni</h4></div>
-                <div class="widget-subtitle text-white"></div>
+        <div class="widget widget-shadow shortcut-widget-box" data-widget-name="4b2fe117d2" >
+            <div class="widget-head">
+                <div>
+                    <div class="widget-title ellipsis"><h4>Feria Alumni</h4></div>
+                    <div class="widget-subtitle text-white"></div>
+                </div>
+            </div>
+            <div class="widget-body">
+                Participa de nuestra feria virtual, una espacio diseñado para que conozcas los beneﬁcios y carreras que tenemos para ti, podrás participar, en tiempo real, en nuestras conferencias con expositores destacados, charlas, talleres.
+            </div>
+            <div class="widget-footer pt-3 pb-3">
+                <a class="text-primary "href="https://feriavirtualalumni.tecsup.net/" target="_blank">Ir a la Feria Alumni</a>
             </div>
         </div>
-        <div class="widget-body">
-            Participa de nuestra feria virtual, una espacio diseñado para que conozcas los beneﬁcios y carreras que tenemos para ti, podrás participar, en tiempo real, en nuestras conferencias con expositores destacados, charlas, talleres.
+        <div class="widget widget-shadow shortcut-widget-box" data-widget-name="4b2fe117d2" >
+            <div class="widget-head">
+                <div>
+                    <div class="widget-title ellipsis"><h4>Alumni Power</h4></div>
+                    <div class="widget-subtitle text-white"></div>
+                </div>
+            </div>
+            <div class="widget-body">
+                Conoce sobre Alumni Power
+            </div>
+            <div class="widget-footer pt-3 pb-3">
+                <a class="text-primary "href="https://alumnipower.tecsup.net/" target="_blank">Ir a la Alumni Power</a>
+            </div>
         </div>
-        <div class="widget-footer pt-3 pb-3">
-            <a class="text-primary "href="#">Ir a la Feria Alumni</a>
+        <div class="widget widget-shadow shortcut-widget-box" data-widget-name="4b2fe117d2" >
+            <div class="widget-head">
+                <div>
+                    <div class="widget-title ellipsis"><h4>Panel Informativo</h4></div>
+                    <div class="widget-subtitle text-white"></div>
+                </div>
+            </div>
+            <div class="widget-body">
+                Conoce sobre las carreras de TECSUP, nuestros egresados y nuestra información de contacto
+            </div>
+            <div class="widget-footer pt-3 pb-3">
+                <a class="text-primary "href="https://alumnipower.tecsup.net/">Ir al panel informativo</a>
+            </div>
         </div>
     </div>
-</div>
 </div>
 
 <div class="widget-group">
@@ -129,7 +158,7 @@
     <div class="widget widget-shadow shortcut-widget-box" data-widget-name="010db5fe0e"  onclick="encuestas()">
         <div class="widget-head">
             <div>
-                <div class="widget-title ellipsis">Evaluaciones</div>
+                <div class="widget-title ellipsis">Encuestas</div>
                 <div class="widget-subtitle"></div>
             </div>
             <div class="widget-control"></div>
@@ -139,7 +168,7 @@
         <div class="widget-footer">
         </div>
     </div>
-    <div class="widget widget-shadow shortcut-widget-box" data-widget-name="4b2fe117d2" onclick="encuestas()">
+<!--<div class="widget widget-shadow shortcut-widget-box" data-widget-name="4b2fe117d2" onclick="encuestas()">
         <div class="widget-head">
             <div>
                 <div class="widget-title ellipsis">Encuestas</div>
@@ -152,7 +181,7 @@
         <div class="widget-footer">
         </div>
     </div>
-    <div class="widget widget-shadow shortcut-widget-box" data-widget-name="4b2fe117d2" onclick="calendario_citas()">
+<div class="widget widget-shadow shortcut-widget-box" data-widget-name="4b2fe117d2" onclick="calendario_citas()">
         <div class="widget-head">
             <div>
                 <div class="widget-title ellipsis">Calendario de citas</div>
@@ -167,7 +196,7 @@
         <div class="widget-footer">
         </div>
     </div>
-    <div class="widget widget-shadow shortcut-widget-box" data-widget-name="4b2fe117d2" onclick="webhooks()">
+<div class="widget widget-shadow shortcut-widget-box" data-widget-name="4b2fe117d2" onclick="webhooks()">
         <div class="widget-head">
             <div>
                 <div class="widget-title ellipsis">Desarrolladores Api Webhooks</div>
@@ -180,6 +209,6 @@
         </div>
         <div class="widget-footer">
         </div>
-    </div>
+    </div> --!
 </div>
 </div>

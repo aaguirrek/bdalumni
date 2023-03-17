@@ -1,0 +1,116 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:ruc",
+ "creation": "2022-12-12 14:38:44.077241",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "empresa",
+  "ruc",
+  "web",
+  "column_break_4",
+  "yt",
+  "redes",
+  "logo",
+  "section_break_8",
+  "nombre",
+  "telf",
+  "column_break_11",
+  "email",
+  "egresado"
+ ],
+ "fields": [
+  {
+   "fieldname": "empresa",
+   "fieldtype": "Data",
+   "label": "Nombre de la empresa/emprendimiento"
+  },
+  {
+   "fieldname": "ruc",
+   "fieldtype": "Data",
+   "label": "RUC",
+   "unique": 1
+  },
+  {
+   "fieldname": "web",
+   "fieldtype": "Data",
+   "label": "Pagina web"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "yt",
+   "fieldtype": "Data",
+   "label": "Enlace youtube (video de servicios de la empresa)"
+  },
+  {
+   "fieldname": "redes",
+   "fieldtype": "Data",
+   "label": "Enlace Instagram/FB"
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Data",
+   "label": "Logo"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "nombre",
+   "fieldtype": "Data",
+   "label": "Nombre"
+  },
+  {
+   "fieldname": "telf",
+   "fieldtype": "Data",
+   "label": "Telefono"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Correo"
+  },
+  {
+   "fieldname": "egresado",
+   "fieldtype": "Link",
+   "label": "Egresado",
+   "options": "Perfil del exalumno"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-12-12 14:38:44.077241",
+ "modified_by": "Administrator",
+ "module": "Bdalumni",
+ "name": "Emprendimiento de egresado",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

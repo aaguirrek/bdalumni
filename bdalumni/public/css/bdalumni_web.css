@@ -19,3 +19,7 @@ background: rgba(249, 250, 250 ,0.75);
 min-height: calc(100vh + 20px);
 overflow: hidden;
 }
+#chat-bubble{
+    display: none!important;
+
+}

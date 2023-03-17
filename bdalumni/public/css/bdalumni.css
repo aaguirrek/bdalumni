@@ -1,22 +1,31 @@
-.theme-grid .theme-title{
+a[onclick="return frappe.ui.toolbar.redirectToUrl()"],
+a[onclick="return frappe.ui.toolbar.view_website()"],
+a[onclick="return new frappe.ui.ThemeSwitcher().show()"],
+a[onclick="return frappe.ui.toolbar.clear_cache()"],
+a[onclick="return frappe.ui.toolbar.redirectToUrl()"]{
+    display:none!important;
+}
+.theme-grid .theme-title, .comment-box{
     display:none!important;
 }
 .btn {
     border-radius: 30px!important;
 }
-
- .btn-group .btn{
+.btn-group .btn{
 margin-right: 5px!important;
 }
-body:not([data-route^="Workspaces"]) 
-.col-lg-2.layout-side-section {
-    display: none;
+a.item-anchor[title="Personalización"], a.item-anchor[title="Build"], a.item-anchor[title="Sitio Web"] {
+    display: none!important;
 }
-
+button[data-label="Create%20Workspace"],button[data-label="Editar"] {
+    display: none!important;
+}
 li.nav-item.dropdown.dropdown-help.dropdown-mobile.d-none.d-lg-block,.chat-bubble {
     display: none!important;
 }
-
+li.nav-item.dropdown.dropdown-notifications.dropdown-mobile.chat-navbar-icon[title="Show Chats"] {
+    display: none;
+}
 .body-scrollable {
     background: var(--fg-color)!important;
 }
@@ -41,3 +50,4 @@ body[data-route="mi-empresa"] .page-container{
 body[data-route="mi-empresa"] .page-head.flex {
     background:transparent;
 }
+

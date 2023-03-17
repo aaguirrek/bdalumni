@@ -1,3 +1,5 @@
+from frappe.desk.form.save import send_updated_docs
+from frappe.share import add_docshare
 from .javaUtil import *
 import frappe
 from frappe.utils.password import update_password as _update_password
@@ -41,7 +43,7 @@ def search2(docname,searchvalue):
 
 
 @frappe.whitelist(allow_guest=True)
-def create( email, nombre, apellido, pwd,ruc ):
+def create( email, nombre, apellido, pwd ):
 	doc = frappe.get_doc({
 					"doctype": "User",
 					"enabled":1,
@@ -56,14 +58,29 @@ def create( email, nombre, apellido, pwd,ruc ):
 					"new_password":pwd,
 					"user_type":"System User"
 	})
-	doc.insert()
+	doc.insert(ignore_permissions=True)
 	_update_password(user=email, pwd=pwd, logout_all_sessions=0)
+	frappe.set_user("Administrator")
 	doc = frappe.get_doc("User",email)
+	doc.role_profile_name="Empresa"
+	doc.save()
 	#frappe.db.set_value("empresa",ruc,"owner",email)
 	pass
-
+@frappe.whitelist(allow_guest=True)
+def set_empresa(razon_social,email):
+	add_docshare("Empresa",razon_social,email,1,1,0,1,0,None,1)
 
 def ofertas(user):
 	if not user:
 		user = frappe.session.user
 	return "(`tabOferta Laboral`.owner = {user} or `tabOferta Laboral`.assigned_by = {user})".format(user=user)
+
+@frappe.whitelist()
+def cancel(doctype,name):
+	doc = frappe.get_doc(doctype, name)
+	if doc.docstatus==0:
+		doc.delete()
+		frappe.msgprint("Se ha eliminado tu publicación", indicator="red", alert=True)
+	else:
+		doc.cancel()
+		frappe.msgprint("Se ha desactivado tu publicación", indicator="red", alert=True)

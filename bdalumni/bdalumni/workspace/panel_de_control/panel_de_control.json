@@ -1,0 +1,118 @@
+{
+ "charts": [],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Panel de control</span>\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Eventos\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Crear Evento\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Todas las ofertas laborales\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Egresados\",\"col\":4}},{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Empresas\",\"col\":4}},{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Nuevas Ofertas no validadas\",\"col\":4}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Alumnis\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Detalles\",\"col\":4}}]",
+ "creation": "2022-12-22 08:37:37.716172",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "color-review-points",
+ "idx": 0,
+ "label": "Panel de control",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Alumnis",
+   "link_count": 3,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Feria Virtual",
+   "link_count": 0,
+   "link_to": "feria-virtual",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Alumni Power",
+   "link_count": 0,
+   "link_to": "alumni-power",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Redes Sociales",
+   "link_count": 0,
+   "link_to": "feria-virtual",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Detalles",
+   "link_count": 1,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reportes",
+   "link_count": 0,
+   "link_to": "ToDo",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2022-12-22 08:50:02.373454",
+ "modified_by": "Administrator",
+ "module": "Bdalumni",
+ "name": "Panel de control",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Perfil del exalumno",
+   "label": "Egresados"
+  },
+  {
+   "document_type": "Empresa",
+   "label": "Empresas"
+  },
+  {
+   "document_type": "Oferta Laboral",
+   "label": "Nuevas Ofertas no validadas",
+   "quick_list_filter": "{\"docstatus\":[\"=\",\"0\"]}"
+  }
+ ],
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Todas las ofertas laborales",
+   "link_to": "Oferta Laboral",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Eventos",
+   "link_to": "Eventos Alumnis",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "Crear Evento",
+   "link_to": "Eventos Alumnis",
+   "type": "DocType"
+  }
+ ],
+ "title": "Panel de control"
+}

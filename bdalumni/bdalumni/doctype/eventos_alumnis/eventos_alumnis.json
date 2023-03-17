@@ -1,0 +1,138 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:nombre",
+ "creation": "2022-12-05 20:31:34.268793",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "autoinscripcion",
+  "section_break_2",
+  "nombre",
+  "lugar",
+  "resumen",
+  "column_break_3",
+  "imagen",
+  "fecha",
+  "hora",
+  "section_break_6",
+  "organizado_por",
+  "section_break_8",
+  "enlace_de_sala_del_evento",
+  "column_break_10",
+  "enlace_de_evento"
+ ],
+ "fields": [
+  {
+   "fieldname": "nombre",
+   "fieldtype": "Data",
+   "label": "Nombre del evento",
+   "unique": 1
+  },
+  {
+   "fieldname": "lugar",
+   "fieldtype": "Data",
+   "label": "Lugar"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fecha",
+   "fieldtype": "Date",
+   "label": "Fecha"
+  },
+  {
+   "fieldname": "hora",
+   "fieldtype": "Time",
+   "label": "Hora"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "organizado_por",
+   "fieldtype": "Data",
+   "label": "Organizado por"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "enlace_de_sala_del_evento",
+   "fieldtype": "Data",
+   "label": "Enlace de sala del evento"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "resumen",
+   "fieldtype": "Small Text",
+   "label": "resumen"
+  },
+  {
+   "fieldname": "imagen",
+   "fieldtype": "Attach Image",
+   "label": "imagen"
+  },
+  {
+   "fieldname": "enlace_de_evento",
+   "fieldtype": "Data",
+   "label": "Enlace de inscripci\u00f3n del evento"
+  },
+  {
+   "default": "0",
+   "fieldname": "autoinscripcion",
+   "fieldtype": "Check",
+   "label": "Inscripci\u00f3n a trav\u00e9s del sistema alumni"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-12-13 11:37:13.520693",
+ "modified_by": "Administrator",
+ "module": "Bdalumni",
+ "name": "Eventos Alumnis",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Alumnis",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

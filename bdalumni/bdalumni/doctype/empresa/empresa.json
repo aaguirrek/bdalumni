@@ -10,18 +10,22 @@
   "user",
   "column_break_2",
   "password",
+  "verificar",
   "section_break_4",
   "ruc",
   "razon_social",
+  "nombre_comercial",
   "column_break_7",
+  "departamento",
+  "direcci\u00f3n_de_empresa",
   "datos_contacto",
-  "direccion_contacto",
   "section_break_10",
   "nombres",
   "apellidos",
   "column_break_13",
   "cargo",
   "celular",
+  "direccion_contacto",
   "section_break_11",
   "logo",
   "video_corporativo",
@@ -79,7 +83,7 @@
   {
    "fieldname": "datos_contacto",
    "fieldtype": "Data",
-   "label": "Tel\u00e9fono de contacto",
+   "label": "Tel\u00e9fono de la empresa",
    "options": "Phone"
   },
   {
@@ -176,12 +180,33 @@
    "fieldname": "linkedin",
    "fieldtype": "Data",
    "label": "LinkedIn"
+  },
+  {
+   "fieldname": "verificar",
+   "fieldtype": "Password",
+   "label": "Verificar contrase\u00f1a"
+  },
+  {
+   "fieldname": "nombre_comercial",
+   "fieldtype": "Data",
+   "label": "Nombre Comercial"
+  },
+  {
+   "fieldname": "departamento",
+   "fieldtype": "Select",
+   "label": "Departamento",
+   "options": "Amazonas\nAncash\nApurimac\nArequipa\nAyacucho\nCajamarca\nCallao\nCusco\nHuancavelica\nHuanuco\nIca\nJun\u00edn\nLa Libertad\nLambayeque\nLima\nLoreto\nMadre de Dios\nMoquegua\nPasco\nPiura\nPuno\nSan Mart\u00edn\nTacna\nTumbes\nUcayali"
+  },
+  {
+   "fieldname": "direcci\u00f3n_de_empresa",
+   "fieldtype": "Data",
+   "label": "Direcci\u00f3n de empresa"
   }
  ],
  "image_field": "logo",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-11-02 11:56:04.407995",
+ "modified": "2022-12-12 16:00:52.147995",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Empresa",

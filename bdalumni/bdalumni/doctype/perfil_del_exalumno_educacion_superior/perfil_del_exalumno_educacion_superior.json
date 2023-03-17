@@ -7,12 +7,11 @@
  "engine": "InnoDB",
  "field_order": [
   "logo",
-  "grado",
   "institucion",
   "carrera",
+  "grado",
   "tipo_de_estudio",
   "pais",
-  "\u00e1rea_de_estudio",
   "estado",
   "desde",
   "hasta"
@@ -22,25 +21,27 @@
    "fieldname": "grado",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Grado"
+   "label": "T\u00edtulo "
   },
   {
    "fieldname": "institucion",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Institucion"
+   "label": "Nombre de la Institucion Educativa"
   },
   {
    "fieldname": "desde",
-   "fieldtype": "Date",
+   "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "Desde"
+   "label": "Desde el a\u00f1o",
+   "options": "2022\n2021\n2020\n2019\n2018\n2017\n2016\n2015\n2014\n2013\n2012\n2011\n2010\n2009\n2008\n2007\n2006\n2005\n2004\n2003\n2002\n2001\n2000\n1999\n1998\n1997\n1996\n1995\n1994\n1993\n1992\n1991\n1990\n1989\n1988\n1987\n1986\n1985\n1984\n1983\n1982\n1981\n1980\n1979\n1978\n1977\n1976\n1975\n1974\n1973\n1972\n1971\n1970"
   },
   {
    "fieldname": "hasta",
-   "fieldtype": "Date",
+   "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "Hasta"
+   "label": "Hasta el a\u00f1o",
+   "options": "2022\n2021\n2020\n2019\n2018\n2017\n2016\n2015\n2014\n2013\n2012\n2011\n2010\n2009\n2008\n2007\n2006\n2005\n2004\n2003\n2002\n2001\n2000\n1999\n1998\n1997\n1996\n1995\n1994\n1993\n1992\n1991\n1990\n1989\n1988\n1987\n1986\n1985\n1984\n1983\n1982\n1981\n1980\n1979\n1978\n1977\n1976\n1975\n1974\n1973\n1972\n1971\n1970"
   },
   {
    "fieldname": "logo",
@@ -51,7 +52,7 @@
    "fieldname": "carrera",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Carrera o curso"
+   "label": "Nombre de la carrera"
   },
   {
    "fieldname": "tipo_de_estudio",
@@ -66,12 +67,6 @@
    "options": "Country"
   },
   {
-   "fieldname": "\u00e1rea_de_estudio",
-   "fieldtype": "Link",
-   "label": "\u00c1rea de estudio",
-   "options": "Area de estudio"
-  },
-  {
    "fieldname": "estado",
    "fieldtype": "Select",
    "label": "Estado",
@@ -81,12 +76,13 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2022-07-18 12:25:10.058315",
+ "modified": "2022-12-12 17:23:23.980046",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Perfil del exalumno Educacion Superior",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "states": []
 }
