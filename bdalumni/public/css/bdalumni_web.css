@@ -1,5 +1,8 @@
-nav.navbar.navbar-light.navbar-expand-lg {
+nav.navbar.navbar-light.navbar-expand-lg,#navbar-breadcrumbs {
     display: none;
+}
+#navbar-breadcrumbs {
+    display: none!important;
 }
 footer.web-footer {
     display: none;

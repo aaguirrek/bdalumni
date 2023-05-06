@@ -2,12 +2,39 @@ $(document).ready(()=>{
 	if(frappe.user.has_role("Empresa") === true && (frappe.user.has_role("System Manager") === false || frappe.user.has_role("System Manager") === undefined)){
 	   frappe.set_route("/app/mi-empresa")
 	   $(".navbar-brand.navbar-home").attr("href","/app/mi-empresa")
-	   setTimeout(()=>
-	   $(".navbar-brand.navbar-home").attr("href","/app/mi-empresa"),700)
+
+	   $(".navbar-brand.navbar-home").append(`<span class="btn btn-primary btn-sm primary-action hidden-xs">Ir al panel de mi empresa</span>` )
+	   $(".navbar-brand.navbar-home").click((e)=>{
+		
+		   $("#dtable").html('<div id="datatable" class="w-100"></div>');
+			createDatatable();
+			loadData();
+	   })
+
+	   
+		createDatatable();loadData();
+
+
+	   setTimeout(()=>{
+	   $(".navbar-brand.navbar-home").attr("href","/app/mi-empresa");
+	   $(".navbar-brand.navbar-home").append(`<span class="btn btn-primary btn-sm primary-action hidden-xs">Ir al panel de mi empresa</span>` )
+	
+	   $(".navbar-brand.navbar-home").click((e)=>{
+			
+			$("#dtable").html('<div id="datatable" class="w-100"></div>');
+			createDatatable();
+			loadData();
+		})
+
+		
+	},700)
 	}
 })
-if(localStorage.getItem("container_fullwidth")===true){}else{
-	frappe.ui.toolbar.toggle_full_width();
+if(localStorage.getItem("container_fullwidth")==="true"){}else{
+	localStorage.setItem("container_fullwidth","true")
+}
+if($("body").hasClass("full-width")===false){
+    $("body").addClass("full-width")
 }
 let datatable = null; 
 function createDatatable(){

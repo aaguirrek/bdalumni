@@ -2,7 +2,7 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "field:nombre",
+ "autoname": "format:nombre_car-{YYYY}-{MM}-{DD}-{#########}",
  "creation": "2022-11-08 11:16:33.713069",
  "default_view": "List",
  "doctype": "DocType",
@@ -31,11 +31,12 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-11-15 12:40:25.509932",
+ "modified": "2023-05-04 13:41:14.347827",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Nombre de carrera",
- "naming_rule": "By fieldname",
+ "name_case": "Title Case",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -65,5 +66,6 @@
  "search_fields": "etiquetas",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "nombre"
 }

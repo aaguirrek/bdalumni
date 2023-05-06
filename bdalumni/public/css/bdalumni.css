@@ -2,8 +2,18 @@ a[onclick="return frappe.ui.toolbar.redirectToUrl()"],
 a[onclick="return frappe.ui.toolbar.view_website()"],
 a[onclick="return new frappe.ui.ThemeSwitcher().show()"],
 a[onclick="return frappe.ui.toolbar.clear_cache()"],
-a[onclick="return frappe.ui.toolbar.redirectToUrl()"]{
+a[onclick="return frappe.ui.toolbar.redirectToUrl()"],#navbar-breadcrumbs{
     display:none!important;
+}
+@media (min-width: 576px){
+    #navbar-breadcrumbs {
+        display: none!important;
+    }
+}
+@media (min-width: 577px){
+    #navbar-breadcrumbs {
+        display: none!important;
+    }
 }
 .theme-grid .theme-title, .comment-box{
     display:none!important;

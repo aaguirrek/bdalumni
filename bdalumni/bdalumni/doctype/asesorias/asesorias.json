@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format:{fecha}-{hora}-{alumni}",
  "creation": "2022-12-12 13:02:26.733037",
@@ -28,7 +29,7 @@
   },
   {
    "fieldname": "hora",
-   "fieldtype": "Select",
+   "fieldtype": "Time",
    "label": "Hora",
    "options": "09:00:00\n10:00:00\n11:00:00\n12:00:00\n13:00:00\n14:00:00"
   },
@@ -77,9 +78,10 @@
    "options": "Pendiente\nAprobado"
   }
  ],
- "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
  "links": [],
- "modified": "2022-12-12 13:09:16.962451",
+ "make_attachments_public": 1,
+ "modified": "2023-04-18 11:27:54.790945",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Asesorias",
@@ -126,5 +128,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }

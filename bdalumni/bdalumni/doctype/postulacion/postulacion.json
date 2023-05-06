@@ -8,6 +8,7 @@
  "engine": "InnoDB",
  "field_order": [
   "status",
+  "column_break_wdgqg",
   "section_break_2",
   "oferta_laboral",
   "nombre_de_la_oferta_labora",
@@ -36,9 +37,6 @@
    "bold": 1,
    "fieldname": "oferta_laboral",
    "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_preview": 1,
-   "in_standard_filter": 1,
    "label": "Oferta laboral",
    "options": "Oferta Laboral",
    "reqd": 1,
@@ -47,6 +45,7 @@
   {
    "fieldname": "exalumno",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Egresado",
    "options": "Perfil del exalumno"
   },
@@ -100,6 +99,7 @@
    "fetch_from": "oferta_laboral.empresa",
    "fieldname": "empresa",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Empresa",
    "options": "Empresa",
    "read_only": 1,
@@ -124,7 +124,6 @@
    "set_only_once": 1
   },
   {
-   "collapsible": 1,
    "fieldname": "datos_del_exalumno_section",
    "fieldtype": "Section Break",
    "label": "Datos del exalumno"
@@ -199,17 +198,19 @@
    "fetch_from": "oferta_laboral.oferta",
    "fieldname": "nombre_de_la_oferta_labora",
    "fieldtype": "Read Only",
+   "hidden": 1,
    "in_global_search": 1,
-   "in_list_view": 1,
-   "in_preview": 1,
-   "in_standard_filter": 1,
    "label": "Nombre de la oferta labora",
    "set_only_once": 1
+  },
+  {
+   "fieldname": "column_break_wdgqg",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-11-15 13:00:12.323584",
+ "modified": "2023-05-05 15:32:41.684955",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Postulacion",
@@ -256,7 +257,7 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "oferta_laboral",
+ "title_field": "nombre_de_la_oferta_labora",
  "track_changes": 1,
  "track_seen": 1
 }

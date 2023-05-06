@@ -6,15 +6,23 @@ frappe.ui.form.on('Oferta Laboral', {
 
 	// }
 	after_save: function(frm){
+		$("#dtable").html('<div id="datatable" class="w-100"></div>');
+		createDatatable();
 		loadData();
 	},
 	after_cancel: function(frm){
+		$("#dtable").html('<div id="datatable" class="w-100"></div>');
+		createDatatable();
 		loadData();
 	},
 	validate: function(frm){
+		$("#dtable").html('<div id="datatable" class="w-100"></div>');
+		createDatatable();
 		loadData();
 	},
 	on_submit: function(frm){
+		$("#dtable").html('<div id="datatable" class="w-100"></div>');
+		createDatatable();
 		loadData();
 	}
 });

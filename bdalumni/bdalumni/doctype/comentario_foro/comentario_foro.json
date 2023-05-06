@@ -1,0 +1,62 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-11 08:52:03.183632",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "foro",
+  "comentario"
+ ],
+ "fields": [
+  {
+   "fieldname": "foro",
+   "fieldtype": "Link",
+   "label": "Foro",
+   "options": "Foro"
+  },
+  {
+   "fieldname": "comentario",
+   "fieldtype": "Text Editor",
+   "label": "comentario"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-04-11 10:04:36.713391",
+ "modified_by": "Administrator",
+ "module": "Bdalumni",
+ "name": "Comentario Foro",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

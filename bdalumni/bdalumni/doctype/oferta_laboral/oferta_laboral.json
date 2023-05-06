@@ -45,7 +45,8 @@
   "fin_de_publicaci\u00f3n",
   "contacto_de_la_empresa",
   "logo_empresa",
-  "amended_from"
+  "amended_from",
+  "carreras"
  ],
  "fields": [
   {
@@ -281,11 +282,20 @@
    "fieldname": "visible",
    "fieldtype": "Check",
    "label": "Mostrar como confidencial el nombre de la empresa"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "carreras",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "in_global_search": 1,
+   "label": "carreras"
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2023-01-13 12:22:08.454271",
+ "make_attachments_public": 1,
+ "modified": "2023-05-05 15:23:12.065188",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Oferta Laboral",
@@ -325,6 +335,7 @@
    "write": 1
   }
  ],
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

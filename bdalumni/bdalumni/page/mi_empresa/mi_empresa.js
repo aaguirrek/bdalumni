@@ -51,3 +51,6 @@ function calendario_citas(){
 function webhooks(){
 	frappe.set_route('/app/webhook')
 }
+function perfil(){
+	frappe.set_route('/app/mi-perfil')
+}

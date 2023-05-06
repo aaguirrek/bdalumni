@@ -66,6 +66,27 @@ def create( email, nombre, apellido, pwd ):
 	doc.save()
 	#frappe.db.set_value("empresa",ruc,"owner",email)
 	pass
+
+@frappe.whitelist(allow_guest=True)
+def update_profile( email, first_name, last_name, new_password, mobile_no ):
+	username = email
+	if first_name == 'Administrator' or first_name == 'administrator':
+		username = 'Administrator'
+	doc = frappe.get_doc("User",username)
+	doc.email = email
+	doc.username = username
+	doc.first_name = first_name
+	doc.last_name = last_name
+	doc.mobile_no = mobile_no
+	doc.save(ignore_permissions=True)
+
+	if new_password != '' and new_password is not None:
+		doc = frappe.get_doc("User",username)
+		_update_password(user=username, pwd=new_password, logout_all_sessions=0)
+		doc.save(ignore_permissions=True)
+		
+	return doc
+
 @frappe.whitelist(allow_guest=True)
 def set_empresa(razon_social,email):
 	add_docshare("Empresa",razon_social,email,1,1,0,1,0,None,1)

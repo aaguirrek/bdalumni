@@ -23,18 +23,26 @@
   "apellidos",
   "estado_civil",
   "genero",
+  "fallecido",
   "datos_b\u00e1sicos_section",
   "correo_del_egresado",
   "correo_personal",
   "numero_de_celular",
   "telefono_de_casa",
   "resumen",
+  "sueldo",
+  "carrera_tecsup",
+  "c\u00f3digo_de_carn\u00e9",
+  "sede",
+  "codalumno",
   "column_break_12",
   "pais_de_residencia",
   "departamento",
   "provincia",
   "distrito",
   "domicilio",
+  "titulado",
+  "fecha_de_egreso",
   "section_break_31",
   "experiencia_laboral",
   "habilidades_section",
@@ -46,7 +54,12 @@
   "idioma_section",
   "idioma",
   "educacion_basica_section",
-  "educacion_basica"
+  "educacion_basica",
+  "area_laboral_section",
+  "area_laboral_1",
+  "area_laboral_2",
+  "area_laboral_3",
+  "area_laboral_4"
  ],
  "fields": [
   {
@@ -56,8 +69,7 @@
    "in_global_search": 1,
    "in_list_view": 1,
    "in_preview": 1,
-   "label": "Nombre",
-   "unique": 1
+   "label": "Nombre"
   },
   {
    "fieldname": "foto",
@@ -66,10 +78,9 @@
   },
   {
    "fieldname": "codigo_del_estudiante",
-   "fieldtype": "Data",
+   "fieldtype": "Small Text",
    "in_list_view": 1,
-   "label": "codigo del estudiante",
-   "unique": 1
+   "label": "codigo del estudiante"
   },
   {
    "bold": 1,
@@ -89,14 +100,13 @@
    "in_list_view": 1,
    "in_preview": 1,
    "in_standard_filter": 1,
-   "label": "DNI",
-   "search_index": 1
+   "label": "DNI"
   },
   {
    "fieldname": "estado_civil",
    "fieldtype": "Select",
    "label": "Estado Civil",
-   "options": "Soltero\nCasado\nDivorciado\nViudo"
+   "options": "\nSoltero\nCasado\nDivorciado\nViudo"
   },
   {
    "collapsible": 1,
@@ -108,7 +118,7 @@
    "fieldname": "genero",
    "fieldtype": "Select",
    "label": "Genero",
-   "options": "M\u00e1sculino\nFemenino"
+   "options": "\nMasculino\nFemenino"
   },
   {
    "fieldname": "column_break_12",
@@ -165,7 +175,7 @@
   },
   {
    "fieldname": "domicilio",
-   "fieldtype": "Data",
+   "fieldtype": "Small Text",
    "label": "Domicilio"
   },
   {
@@ -228,8 +238,7 @@
    "in_list_view": 1,
    "in_preview": 1,
    "in_standard_filter": 1,
-   "label": "Apellidos",
-   "search_index": 1
+   "label": "Apellidos"
   },
   {
    "collapsible": 1,
@@ -287,12 +296,80 @@
    "fieldname": "resumen",
    "fieldtype": "Text",
    "label": "Resumen"
+  },
+  {
+   "fieldname": "sueldo",
+   "fieldtype": "Data",
+   "label": "Sueldo"
+  },
+  {
+   "fieldname": "carrera_tecsup",
+   "fieldtype": "Data",
+   "label": "Carrera Profesional T\u00e9cnica"
+  },
+  {
+   "fieldname": "c\u00f3digo_de_carn\u00e9",
+   "fieldtype": "Data",
+   "label": "C\u00f3digo de carn\u00e9"
+  },
+  {
+   "fieldname": "fecha_de_egreso",
+   "fieldtype": "Date",
+   "label": "Fecha de Egreso"
+  },
+  {
+   "fieldname": "area_laboral_section",
+   "fieldtype": "Section Break",
+   "label": "Area Laboral"
+  },
+  {
+   "fieldname": "area_laboral_1",
+   "fieldtype": "Data",
+   "label": "Area laboral 1"
+  },
+  {
+   "fieldname": "area_laboral_2",
+   "fieldtype": "Data",
+   "label": "Area laboral 2"
+  },
+  {
+   "fieldname": "area_laboral_3",
+   "fieldtype": "Data",
+   "label": "Area laboral 3"
+  },
+  {
+   "fieldname": "area_laboral_4",
+   "fieldtype": "Data",
+   "label": "Area laboral 4"
+  },
+  {
+   "fieldname": "titulado",
+   "fieldtype": "Select",
+   "label": "Titulado",
+   "options": "\nTitulado\nEgresado"
+  },
+  {
+   "fieldname": "sede",
+   "fieldtype": "Data",
+   "label": "Sede"
+  },
+  {
+   "fieldname": "codalumno",
+   "fieldtype": "Data",
+   "label": "C\u00f3digo del Alumno"
+  },
+  {
+   "fieldname": "fallecido",
+   "fieldtype": "Select",
+   "label": "Fallecido",
+   "options": "\nS\u00ed\nNo"
   }
  ],
  "image_field": "foto",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-01-17 10:58:04.737935",
+ "make_attachments_public": 1,
+ "modified": "2023-04-18 11:25:13.466235",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Perfil del exalumno",
@@ -323,11 +400,19 @@
    "role": "Alumnis",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Guest"
   }
  ],
+ "search_fields": "nombre,dni,apellidos",
  "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "nombre"
+ "title_field": "nombre",
+ "track_changes": 1
 }
