@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Panel de control</span>\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Eventos\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Crear Evento\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Todas las ofertas laborales\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Egresados\",\"col\":4}},{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Empresas\",\"col\":4}},{\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Nuevas Ofertas no validadas\",\"col\":4}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Alumnis\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Detalles\",\"col\":4}}]",
+ "content": "[{\"id\":\"5JNiftJi68\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Panel de control</span>\",\"col\":12}},{\"id\":\"QFKV_U8k0s\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Eventos\",\"col\":3}},{\"id\":\"Jh2sasPV5o\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Crear Evento\",\"col\":3}},{\"id\":\"Vw-Zw0A3ww\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Todas las ofertas laborales\",\"col\":3}},{\"id\":\"5AgKpvIry-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Encuestas\",\"col\":3}},{\"id\":\"cy2Z67tZm5\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"iDgwkev2YK\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Egresados\",\"col\":4}},{\"id\":\"K9X7bNVnW5\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Empresas\",\"col\":4}},{\"id\":\"PfIqEIGSpE\",\"type\":\"quick_list\",\"data\":{\"quick_list_name\":\"Nuevas Ofertas no validadas\",\"col\":4}},{\"id\":\"23tl13NDKE\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"zqYgpVhoMu\",\"type\":\"card\",\"data\":{\"card_name\":\"Alumnis\",\"col\":4}},{\"id\":\"g9PzCl_-r3\",\"type\":\"card\",\"data\":{\"card_name\":\"Detalles\",\"col\":4}}]",
  "creation": "2022-12-22 08:37:37.716172",
  "docstatus": 0,
  "doctype": "Workspace",
@@ -8,6 +8,7 @@
  "hide_custom": 0,
  "icon": "color-review-points",
  "idx": 0,
+ "is_hidden": 0,
  "label": "Panel de control",
  "links": [
   {
@@ -67,10 +68,11 @@
    "type": "Link"
   }
  ],
- "modified": "2022-12-22 08:50:02.373454",
+ "modified": "2023-05-25 16:34:30.202895",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Panel de control",
+ "number_cards": [],
  "owner": "Administrator",
  "parent_page": "",
  "public": 1,
@@ -104,6 +106,13 @@
    "doc_view": "List",
    "label": "Eventos",
    "link_to": "Eventos Alumnis",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Encuestas",
+   "link_to": "Web Form",
    "type": "DocType"
   },
   {

@@ -3,7 +3,9 @@
  "allow_import": 1,
  "allow_rename": 1,
  "autoname": "FORMAT:EMP-{YYYY}-{MM}-{#####}",
+ "beta": 1,
  "creation": "2022-09-19 11:05:42.797278",
+ "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -28,6 +30,8 @@
   "localidad",
   "puestos_sin_frontera",
   "vacantes",
+  "mostrar_salario_de_oferta_laboral_section",
+  "mostrar_salario",
   "rango_salarial_section",
   "desde",
   "column_break_14",
@@ -119,26 +123,30 @@
   {
    "fieldname": "puestos_sin_frontera",
    "fieldtype": "Select",
+   "hidden": 1,
    "label": "Puestos sin frontera",
-   "options": "Si\nNo",
-   "reqd": 1
+   "options": "Si\nNo"
   },
   {
+   "depends_on": "eval:doc.mostrar_salario!=\"No\"",
    "fieldname": "rango_salarial_section",
    "fieldtype": "Section Break",
    "label": "Rango Salarial"
   },
   {
+   "depends_on": "eval:doc.mostrar_salario!=\"No\"",
    "fieldname": "desde",
    "fieldtype": "Currency",
    "label": "Desde",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.mostrar_salario!=\"No\""
   },
   {
+   "depends_on": "eval:doc.mostrar_salario!=\"No\"",
    "fieldname": "column_break_14",
    "fieldtype": "Column Break"
   },
   {
+   "depends_on": "eval:doc.mostrar_salario!=\"No\"",
    "fieldname": "hasta",
    "fieldtype": "Currency",
    "label": "Hasta"
@@ -188,11 +196,9 @@
    "reqd": 1
   },
   {
-   "fetch_from": "empresa.direccion_contacto",
    "fieldname": "contacto_de_la_empresa",
    "fieldtype": "Data",
-   "label": "Contacto de la empresa",
-   "reqd": 1
+   "label": "Contacto de la empresa"
   },
   {
    "description": "describa las funciones",
@@ -290,12 +296,32 @@
    "hidden": 1,
    "in_global_search": 1,
    "label": "carreras"
+  },
+  {
+   "fieldname": "mostrar_salario_de_oferta_laboral_section",
+   "fieldtype": "Section Break",
+   "label": "Mostrar Salario de Oferta Laboral"
+  },
+  {
+   "default": "Si",
+   "fieldname": "mostrar_salario",
+   "fieldtype": "Select",
+   "label": "Mostrar Salario",
+   "options": "Si\nNo"
   }
  ],
+ "force_re_route_to_default_view": 1,
+ "hide_toolbar": 1,
  "is_submittable": 1,
- "links": [],
+ "links": [
+  {
+   "group": "Postulaciones a la oferta laboral",
+   "link_doctype": "Postulacion",
+   "link_fieldname": "oferta_laboral"
+  }
+ ],
  "make_attachments_public": 1,
- "modified": "2023-05-05 15:23:12.065188",
+ "modified": "2023-05-25 17:03:07.416958",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Oferta Laboral",
@@ -336,8 +362,9 @@
   }
  ],
  "show_title_field_in_link": 1,
- "sort_field": "modified",
+ "sort_field": "fin_de_publicaci\u00f3n",
  "sort_order": "DESC",
  "states": [],
- "title_field": "oferta"
+ "title_field": "oferta",
+ "track_changes": 1
 }

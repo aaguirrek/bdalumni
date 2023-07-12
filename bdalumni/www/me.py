@@ -16,5 +16,7 @@ def get_context(context):
 		frappe.redirect("/app")
 	if "Empresa" in roles:
 		frappe.redirect("/app/mi-empresa")
+	if not "tecsup.edu.pe" in frappe.session.user:
+		frappe.redirect("/registro")
 	context.current_user = frappe.get_doc("User", frappe.session.user)
 	context.show_sidebar = False

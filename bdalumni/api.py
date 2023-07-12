@@ -66,6 +66,18 @@ def create( email, nombre, apellido, pwd ):
 	doc.save()
 	#frappe.db.set_value("empresa",ruc,"owner",email)
 	pass
+@frappe.whitelist(allow_guest=True)
+def setEmpresafinal(email):
+	doc = frappe.get_doc("User",email)
+	doc.module_profile = "Empresa"
+	doc.role_profile_name ="Empresa"
+	doc.user_type = "System User"
+	doc.save(ignore_permissions=True)
+	doc = frappe.get_doc("User",email)
+	doc.user_type = "System User"
+	doc.save(ignore_permissions=True)
+	return doc
+
 
 @frappe.whitelist(allow_guest=True)
 def update_profile( email, first_name, last_name, new_password, mobile_no ):
@@ -84,7 +96,7 @@ def update_profile( email, first_name, last_name, new_password, mobile_no ):
 		doc = frappe.get_doc("User",username)
 		_update_password(user=username, pwd=new_password, logout_all_sessions=0)
 		doc.save(ignore_permissions=True)
-		
+
 	return doc
 
 @frappe.whitelist(allow_guest=True)

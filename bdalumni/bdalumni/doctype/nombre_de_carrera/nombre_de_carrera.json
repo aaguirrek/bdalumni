@@ -10,7 +10,8 @@
  "engine": "InnoDB",
  "field_order": [
   "nombre",
-  "etiquetas"
+  "etiquetas",
+  "tipo"
  ],
  "fields": [
   {
@@ -27,11 +28,17 @@
    "fieldname": "etiquetas",
    "fieldtype": "Data",
    "label": "Etiquetas"
+  },
+  {
+   "fieldname": "tipo",
+   "fieldtype": "Select",
+   "label": "tipo",
+   "options": "TECNICO 2 A\u00d1OS\nPROFESIONAL TECNICO 3 A\u00d1OS"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-04 13:41:14.347827",
+ "modified": "2023-05-09 18:28:33.858223",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Nombre de carrera",
@@ -64,6 +71,8 @@
  ],
  "quick_entry": 1,
  "search_fields": "etiquetas",
+ "show_name_in_global_search": 1,
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

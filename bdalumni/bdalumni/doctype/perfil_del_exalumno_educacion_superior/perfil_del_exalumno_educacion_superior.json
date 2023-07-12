@@ -27,7 +27,8 @@
    "fieldname": "institucion",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Nombre de la Institucion Educativa"
+   "label": "Nombre de la Institucion Educativa",
+   "reqd": 1
   },
   {
    "fieldname": "desde",
@@ -52,7 +53,8 @@
    "fieldname": "carrera",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Nombre de la carrera"
+   "label": "Nombre de la carrera",
+   "reqd": 1
   },
   {
    "fieldname": "tipo_de_estudio",
@@ -76,7 +78,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2022-12-12 17:23:23.980046",
+ "modified": "2023-05-25 17:28:41.202885",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Perfil del exalumno Educacion Superior",

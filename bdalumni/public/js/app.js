@@ -5,8 +5,9 @@ $(document).ready(()=>{
 
 	   $(".navbar-brand.navbar-home").append(`<span class="btn btn-primary btn-sm primary-action hidden-xs">Ir al panel de mi empresa</span>` )
 	   $(".navbar-brand.navbar-home").click((e)=>{
-		
-		   $("#dtable").html('<div id="datatable" class="w-100"></div>');
+			e.preventDefault();
+			frappe.set_route("/app/mi-empresa");		
+		   	$("#dtable").html('<div id="datatable" class="w-100"></div>');
 			createDatatable();
 			loadData();
 	   })
@@ -20,7 +21,8 @@ $(document).ready(()=>{
 	   $(".navbar-brand.navbar-home").append(`<span class="btn btn-primary btn-sm primary-action hidden-xs">Ir al panel de mi empresa</span>` )
 	
 	   $(".navbar-brand.navbar-home").click((e)=>{
-			
+			e.preventDefault();
+			frappe.set_route("/app/mi-empresa");
 			$("#dtable").html('<div id="datatable" class="w-100"></div>');
 			createDatatable();
 			loadData();

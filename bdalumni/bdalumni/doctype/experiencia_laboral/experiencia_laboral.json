@@ -24,13 +24,15 @@
    "fieldname": "nombre_de_la_empresa",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Nombre de la empresa"
+   "label": "Nombre de la empresa",
+   "reqd": 1
   },
   {
    "fieldname": "cargo",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Cargo"
+   "label": "Cargo",
+   "reqd": 1
   },
   {
    "fieldname": "desde",
@@ -58,7 +60,8 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-04-18 11:05:54.216872",
+ "make_attachments_public": 1,
+ "modified": "2023-05-25 17:26:09.274032",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Experiencia laboral",

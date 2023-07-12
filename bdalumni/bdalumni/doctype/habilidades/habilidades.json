@@ -16,7 +16,8 @@
    "fieldname": "nombre",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Nombre"
+   "label": "Nombre",
+   "reqd": 1
   },
   {
    "fieldname": "nivel",
@@ -39,12 +40,13 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2022-07-12 11:26:45.320317",
+ "modified": "2023-05-25 17:30:19.898712",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Habilidades",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "states": []
 }

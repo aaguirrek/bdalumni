@@ -139,8 +139,9 @@
   },
   {
    "fieldname": "rubro",
-   "fieldtype": "Data",
-   "label": "Rubro"
+   "fieldtype": "Select",
+   "label": "Rubro",
+   "options": "AEROLINEAS-AERONAVES\nAGRICULTURA-GANADER\u00cdA-AGROINDUSTRIA\nAUTOMOTRIZ-MAQUINARIA\nBANCA-FINANZAS\nBIENES Y SERVICIOS INDUSTRIALES\nCOMERCIO EXTERIOR-ACTIVIDAD EMPRESARIAL\nCONSTRUCCI\u00d3N-INGENIER\u00cdA\nCONSULTOR\u00cdA-SERVICIOS EMPRESARIALES\nEDUCACI\u00d3N-CAPACITACI\u00d3N\nENERG\u00cdA\nGAS-PETROLEO\nMANUFACTURA\nMINER\u00cdA\nOTROS\nPRODUCTOS QU\u00cdMICOS\nSERVICIOS P\u00daBLICOS\nTECNOLOG\u00cdA DE LA INFORMACI\u00d3N-C\u00d3MPUTO\nTELECOMUNICACIONES\nTRANSPORTE"
   },
   {
    "fieldname": "sitio_web",
@@ -207,7 +208,7 @@
  "index_web_pages_for_search": 1,
  "links": [],
  "make_attachments_public": 1,
- "modified": "2023-04-16 19:07:04.584370",
+ "modified": "2023-05-09 18:25:10.210338",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Empresa",
