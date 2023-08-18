@@ -1,3 +1,91 @@
+
+#body{
+    background-image: url(https://jointec.site/assets/img/social/header.jpg);
+    background-size: contain;
+}
+.content.page-container{
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
+}
+
+body[data-route^="Workspaces"]  .desk-sidebar-item.standard-sidebar-item.selected {
+    background: rgba(255,255,255,0.25);
+}
+body[data-route^="Workspaces"] .list-sidebar.overlay-sidebar {
+    background: linear-gradient(to right, #009CDE, #007fb5);
+    padding: 10px;
+    border-radius: 10px;
+}
+.widget.shortcut-widget-box {
+    cursor: pointer;
+    height: 110%;
+    background: linear-gradient(to right, #009CDE, #007fb5);
+}
+
+.widget.number-widget-box{
+    cursor: pointer;
+    background: linear-gradient(to right, #b38ffc, #9C6FF7);
+}
+.ce-paragraph.cdx-block.widget{
+    box-shadow:none!important;
+    background:transparent;
+}
+
+.widget.number-widget-box * {
+    color:white!important;
+}
+
+.widget.shortcut-widget-box * {
+    color:white;
+}
+.page-head.flex {
+    background:transparent;
+}
+
+.layout-main-section {
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.04), 0 1px 6px rgba(0, 0, 0, 0.04)!important;
+}
+body[data-route^="Workspaces"]  .widget{
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.04), 0 1px 6px rgba(0, 0, 0, 0.04)!important;
+}
+body[data-route^="Workspaces"]  .widget.spacer{
+    background: transparent;
+    box-shadow:none!important;
+}
+body[data-route^="Workspaces"] {
+    --icon-stroke: white!important;
+}
+
+body[data-route^="Workspaces"] .widget-control .btn:hover,
+body[data-route^="Workspaces"] .widget.quick-list-widget-box .refresh-list:hover, .widget.quick-list-widget-box .filter-list:hover, .widget.quick-list-widget-box .add-new:hover {
+    
+    background: linear-gradient(to right, #009CDE, #007fb5);
+}
+body[data-route^="Workspaces"] .widget-control .btn,
+body[data-route^="Workspaces"] .widget.quick-list-widget-box .refresh-list, .widget.quick-list-widget-box .filter-list, .widget.quick-list-widget-box .add-new {
+    
+    background: linear-gradient(to right, #009CDE, #007fb5);
+}
+body[data-route^="Workspaces"] .layout-main-section {
+    box-shadow: none!important;
+    background: transparent;
+}
+body[data-route^="Workspaces"]  .standard-sidebar .standard-sidebar-item:hover, .desk-sidebar .standard-sidebar-item:hover, .search-dialog .search-results .search-sidebar .standard-sidebar-item:hover {
+    background: rgba(255,255,255,0.25);
+}
+
+body[data-route^="Workspaces"]   .sidebar-item-container *, body[data-route^="Workspaces"]   .standard-sidebar-label * {
+    color: white;
+}
+
+
+
+body[data-route^="Workspaces"]  .page-head {
+    background: transparent;
+}
+
+
+
 a[onclick="return frappe.ui.toolbar.redirectToUrl()"],
 a[onclick="return frappe.ui.toolbar.view_website()"],
 a[onclick="return new frappe.ui.ThemeSwitcher().show()"],
@@ -40,11 +128,25 @@ li.nav-item.dropdown.dropdown-notifications.dropdown-mobile.chat-navbar-icon[tit
     background: var(--fg-color)!important;
 }
 
-
+body[data-route^="mi-empresa"] .widget.widget-shadow:hover {
+    box-shadow: var(--shadow-base);
+}
+body[data-route^="mi-empresa"] .widget.widget-shadow:hover * {
+    color: white!important;
+}
 .theme-title{
     display: none!important;
 }
+.indicator-pill.orange, .indicator-pill-right.orange, .indicator-pill-round.orange {
+    background: var(--bg-orange)!important;
+    color: var(--text-on-orange)!important;
+}
 
+
+body[data-route^="mi-empresa"] .widget.widget-shadow:hover * .orange {
+    background: var(--bg-orange)!important;
+    color: var(--text-on-orange)!important;
+}
 body[data-route="mi-empresa"] {
     background: url(/fondotecsup2.png);
     min-height: calc(100vh + 20px);
@@ -61,3 +163,15 @@ body[data-route="mi-empresa"] .page-head.flex {
     background:transparent;
 }
 
+body[data-route^="mi-empresa"] #body{
+    background-image: unset;
+    background-size: contain;
+}
+body[data-route^="mi-empresa"] .content.page-container{
+    background: transparent;
+    backdrop-filter:none;
+}
+
+.widget.dashboard-widget-box .chart-actions .filter-label {
+    color: white!important;
+}
