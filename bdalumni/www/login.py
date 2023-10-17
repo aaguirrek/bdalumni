@@ -7,6 +7,7 @@ from frappe import _
 from frappe.auth import LoginManager
 from frappe.integrations.doctype.ldap_settings.ldap_settings import LDAPSettings
 from frappe.integrations.oauth2_logins import decoder_compat
+from urllib.parse import urlparse
 from frappe.utils import cint
 from frappe.utils.html_utils import get_icon_html
 from frappe.utils.jinja import guess_is_path
@@ -36,7 +37,9 @@ def get_context(context):
 		if redirect_to != "login":
 			frappe.local.flags.redirect_location = redirect_to
 			raise frappe.Redirect
-
+	
+	parsed_url = urlparse(frappe.request.url)
+	context["site_url"] = parsed_url.netloc
 	context.no_header = True
 	context.for_test = "login.html"
 	context["title"] = "Login"

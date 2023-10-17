@@ -85,6 +85,7 @@
 					<form class="form-signin form-login" role="form">
 						{{ email_login_body() }}
 					</form>
+					{% if site_url != 'empresas-jointec.tecsup.edu.pe' %}
 					<div class="social-logins text-center">
 						{% if not disable_user_pass_login or (ldap_settings and ldap_settings.enabled) %}
 						<p class="text-muted login-divider">{{ _("or") }}</p>
@@ -102,6 +103,7 @@
 							{% endfor %}
 						</div>
 					</div>
+					{% endif %}
 				</div>
 				{% else %}
 					{{ email_login_body() }}
@@ -127,7 +129,7 @@
 		{%- if not disable_signup and not disable_user_pass_login -%}
 		<div class="text-center sign-up-message">
 			{{ _("Don't have an account?") }}
-			<a href="#signup">{{ _("Sign up") }}</a>
+			<a href="/registro-de-empresa">{{ _("Sign up") }}</a>
 		</div>
 		{%- endif -%}
 	</section>
