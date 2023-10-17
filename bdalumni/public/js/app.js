@@ -1,5 +1,5 @@
 $(document).ready(()=>{
-	if(frappe.user.has_role("Empresa") === true && (frappe.user.has_role("System Manager") === false || frappe.user.has_role("System Manager") === undefined)){
+	if(window.location.hostname === "empresas-jointec.tecsup.edu.pe"){
 	   frappe.set_route("/app/mi-empresa")
 	   $(".navbar-brand.navbar-home").attr("href","/app/mi-empresa")
 

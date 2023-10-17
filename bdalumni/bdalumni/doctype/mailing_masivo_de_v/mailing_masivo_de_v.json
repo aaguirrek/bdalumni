@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:correo",
+ "creation": "2023-10-17 12:11:02.850565",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "razon_social",
+  "nombre_completo",
+  "ruc",
+  "correo",
+  "telefono",
+  "cargo",
+  "web"
+ ],
+ "fields": [
+  {
+   "fieldname": "razon_social",
+   "fieldtype": "Data",
+   "label": "razon social"
+  },
+  {
+   "fieldname": "nombre_completo",
+   "fieldtype": "Data",
+   "label": "nombre completo"
+  },
+  {
+   "fieldname": "ruc",
+   "fieldtype": "Data",
+   "label": "ruc"
+  },
+  {
+   "fieldname": "correo",
+   "fieldtype": "Data",
+   "label": "correo",
+   "unique": 1
+  },
+  {
+   "fieldname": "telefono",
+   "fieldtype": "Data",
+   "label": "telefono"
+  },
+  {
+   "fieldname": "cargo",
+   "fieldtype": "Data",
+   "label": "cargo"
+  },
+  {
+   "fieldname": "web",
+   "fieldtype": "Data",
+   "label": "web"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-10-17 12:11:18.365689",
+ "modified_by": "Administrator",
+ "module": "Bdalumni",
+ "name": "Mailing Masivo de v",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
