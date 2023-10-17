@@ -9,6 +9,37 @@ def docField(docname):
 	return data
 
 @frappe.whitelist(allow_guest=True)
+def checkEmpresa(ruc,email,first_name):
+	
+	frappe.set_user("Administrator")
+	if frappe.db.exists("Empresa",{"ruc":ruc}) is None:
+		return False
+	else:
+		if frappe.db.exists("User",email) is None:
+			doc = frappe.get_doc({
+							"doctype": "User",
+							"enabled":1,
+							"first_name":first_name,
+							"full_name":first_name,
+							"email": email,
+							"send_welcome_email":1,
+							"thread_notify":0,
+							"role_profile_name": "Empresa",
+							"module_profile":"Empresa",
+							"user_type":"System User"
+			})
+			doc.insert(ignore_permissions=True)
+			frappe.set_user("Administrator")
+			doc = frappe.get_doc("User",email)
+			doc.role_profile_name="Empresa"
+			doc.save()
+		empresa = frappe.get_list(doctype="Empresa",fields=["name"],filters=[["ruc","=",ruc]])
+		add_docshare("Empresa",empresa[0].name,email,1,1,0,1,0,None,1)
+		
+		return True
+
+
+@frappe.whitelist(allow_guest=True)
 def docTable(docname):
 	data = frappe.db.sql("""SELECT * FROM tabDocField WHERE parent = %(docname)s  AND in_list_view = 1  ORDER BY idx ASC;""", values={"docname":docname}, as_dict=1)
 	return data
