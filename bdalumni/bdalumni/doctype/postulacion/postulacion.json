@@ -210,7 +210,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-05 15:32:41.684955",
+ "modified": "2023-10-27 13:24:07.635449",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Postulacion",
@@ -227,6 +227,7 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "select": 1,
    "share": 1,
    "write": 1
   },
@@ -240,6 +241,7 @@
    "read": 1,
    "report": 1,
    "role": "Exalumno",
+   "select": 1,
    "share": 1,
    "write": 1
   },
@@ -250,6 +252,7 @@
    "read": 1,
    "report": 1,
    "role": "Empresa",
+   "select": 1,
    "share": 1,
    "write": 1
   }
