@@ -49,7 +49,8 @@
   "contacto_de_la_empresa",
   "logo_empresa",
   "amended_from",
-  "carreras"
+  "carreras",
+  "enviado_a_aprobacion"
  ],
  "fields": [
   {
@@ -308,6 +309,14 @@
    "fieldtype": "Select",
    "label": "Mostrar Salario",
    "options": "Si\nNo"
+  },
+  {
+   "default": "No",
+   "fieldname": "enviado_a_aprobacion",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Enviado a aprobacion",
+   "options": "No\nSi"
   }
  ],
  "is_submittable": 1,
@@ -319,7 +328,7 @@
   }
  ],
  "make_attachments_public": 1,
- "modified": "2023-10-27 13:35:54.271600",
+ "modified": "2023-10-31 12:20:18.129225",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Oferta Laboral",
