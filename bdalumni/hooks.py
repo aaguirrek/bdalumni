@@ -106,6 +106,9 @@ permission_query_conditions = {
 doc_events = {
  	"Mailing Masivo de v": {
  		"after_insert": "bdalumni.event.checkEmpresa"
+	},
+	"Oferta Laboral": {
+		#"after_insert": "bdalumni.event.checkEmpresa"
 	}
 }
 
