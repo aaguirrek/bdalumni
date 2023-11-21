@@ -7,7 +7,9 @@
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(15px);
 }
-
+ul#awesomplete_list_7 li span.small {
+    display: none;
+}
 body[data-route^="Workspaces"]  .desk-sidebar-item.standard-sidebar-item.selected {
     background: rgba(255,255,255,0.25);
 }
