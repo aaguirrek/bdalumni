@@ -2,18 +2,47 @@
 import { EmailEditor } from 'vue-email-editor'
 import { ref } from 'vue';
 import Swal from 'sweetalert2'
-const minHeight = ref("1000px")
 const locale =  ref("es")
-const projectId =  ref(204902) // replace with your project id
+const projectId =  ref(204902)
 let path = location.href.split("?")[1].split("&")
 let args = {}
+let val_inicio=0
 for (const iterator of path) {
   let arg = iterator.split("=")
   args[arg[0]] = decodeURI(arg[1])
 }
+let mergeTags = {}
+const init=ref(0)
 
-console.log(args)
+let options =  ({
+ mergeTags:mergeTags
+})
 
+frappe.call({
+  method:  "bdalumni.events.get_fields",
+  args: {doctype:args.doctype },
+  callback(res) {
+    let resp = res.message
+
+    let resultado = {} 
+    for (const it of resp) {
+      if(it.label!==null){
+        resultado[it.fieldname] = {
+          name:it.label,
+          value:`{{doc.${it.fieldname}}}`,
+          sample: it.label
+        }
+      }
+    }
+    
+     mergeTags = resultado
+     options =  ({
+      mergeTags:mergeTags
+      })
+      val_inicio++;
+     init.value=val_inicio
+  }
+});
 const tools = ref({
   // disable image tool
   image: {
@@ -21,21 +50,8 @@ const tools = ref({
   }
 })
 const emailEditor = ref(null)
-const options =  ({
-  customCSS: [
-    `
-      a[href="https://unlayer.com/?utm_medium=web-editor&utm_campaign=editor-referral"] {
-          display: none!important;
-      }
 
-      .blockbuilder-tools-panel.bootstrap .tab-content{
-          height:100%!important;
-      }`
-          
-  ]
-
-})
-const appearance =  ({
+const appearance = ({
   theme: 'light',
 } )
 
@@ -49,22 +65,25 @@ frappe.call({
     if(res.message.data!==null && res.message.data!==undefined){
       jsondata = JSON.parse(res.message.data)
     }
+      val_inicio++;
+     init.value=val_inicio
     
   }
 });
 const editorLoaded = () => {
+
         emailEditor.value.editor.loadDesign(jsondata);
         emailEditor.value.editor.registerCallback('image', function(file, done) {
-                  var data = new FormData()
-                 data.append('file',  file.attachments[0], file.attachments[0].name);
-                 done({ progress: 10 })
-                data.append('is_private', 0);
-                data.append('folder', "Home");
-                data.append('file', file.attachments[0])
-                frappe.SendMedia({method:"upload_file",args:data,callback(e){
-                  console.log(e)
-                  done({ progress: 100, url: location.origin+e.message.file_url })
-                }})
+              var data = new FormData()
+              data.append('file',  file.attachments[0], file.attachments[0].name);
+              done({ progress: 10 })
+            data.append('is_private', 0);
+            data.append('folder', "Home");
+            data.append('file', file.attachments[0])
+            frappe.SendMedia({method:"upload_file",args:data,callback(e){
+              console.log(e)
+              done({ progress: 100, url: location.origin+e.message.file_url })
+            }})
       })
     }
     
@@ -93,7 +112,7 @@ const exportHtml = () => {
 
         frappe.call({
           method: "frappe.client.get",
-          args: {doctype:args.doctype,name:args.docname },
+          args: {doctype:"Notification",name:args.docname },
           callback(r) {
             r.message
             r.message.message = data.html
@@ -128,12 +147,12 @@ const exportHtml = () => {
 
 <template>
      <div id="app">
-    <div class="container">
+    <div class="container" v-if="init==2">
       <div id="bar" style="height: 66px;">
         <h3 style="float:left; margin-left: 1rem; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Creador de correos</h3>
         <button v-on:click="exportHtml">Guardar</button>
       </div>
-
+      
       <EmailEditor
         :appearance="appearance"
         min-height="calc(100vh - 70px)"

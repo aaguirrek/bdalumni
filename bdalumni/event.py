@@ -8,6 +8,27 @@ import json
 from frappe.share import add_docshare
 import datetime
 
+
+
+@frappe.whitelist(allow_guest=True)
+def get_fields(doctype: str):
+	DocField = frappe.qb.DocType("DocField")
+	from_doc_fields = (
+		frappe.qb.from_(DocField)
+		.select(
+			DocField.fieldname,
+			DocField.fieldtype,
+			DocField.label
+		)
+		.where(DocField.parent == doctype)
+		.run(as_dict=True)
+	)
+	res = []
+	res.extend(from_doc_fields)
+	return res
+
+
+
 @frappe.whitelist()
 def checkEmpresa(doc, event=None): 
 	ruc = doc.ruc
