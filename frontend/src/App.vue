@@ -105,8 +105,8 @@ const exportHtml = () => {
               callback(res) {
                
                   Swal.fire({
-                    title: "Good job!",
-                    text: "You clicked the button!",
+                    title: "Guardado!",
+                    text: "Se ha guardado su diseño, de manera exitosa!",
                     icon: "success",
                     showConfirmButton: false,
                     timer: 1500
