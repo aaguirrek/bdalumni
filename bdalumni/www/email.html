@@ -3,10 +3,8 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Email Builder</title>
-  <link rel="stylesheet" type="text/css" href="/loader.css" />
   <script>
     window.frappe = {};
     frappe.ready_events = [];
@@ -99,43 +97,6 @@
       let domain_selector = 0
       let dev_domain = '';
       let dev_token = '';  
-      if(domain_selector ===0){ //avit
-        frappe.url_ex = "https://shop.avitaqp.org";
-        dev_domain = "shop.avitaqp.org";
-        dev_token = 'YzZkNjE2N2Y4NmM2ZWUzOmUxNDFiMTdiMWEwODY1Mg==';
-        frappe.user_id = "Administrator";
-      }else{
-        if(domain_selector === 1 ){ //santana
-          frappe.url_ex = "https://erp.santanaviajes.com";
-          dev_domain = "erp.santanaviajes.com";
-          dev_token = "NTAyNGU5YWNiNzFmNWU1OjAzNDZjMjAwYmEyOTliZA==";
-          frappe.user_id = "s@peruintercorp.com";
-        }
-      }
-      
-      frappe.call = (el) => {
-        if(el.dataType === undefined){
-          const xhttp = new XMLHttpRequest();
-          xhttp.onload = function () {  el.callback(JSON.parse(this.responseText))  }
-          xhttp.open("POST", `https://${dev_domain}/api/method/${el.method}`, true);
-          xhttp.setRequestHeader("Content-type", "application/json");
-          xhttp.setRequestHeader("Authorization", "Basic " + dev_token);
-          xhttp.send(JSON.stringify(el.args));
-        }else{
-          const xhttp = new XMLHttpRequest();
-          xhttp.onload = function () { el.callback(JSON.parse(this.responseText)) }
-          xhttp.open("POST", `https://${dev_domain}/api/method/${el.method}`, true);
-          xhttp.setRequestHeader("Authorization", "Basic " + dev_token);
-          xhttp.send(el.args);
-        }
-      }
-      frappe.SendMedia = (el) => {
-            const xhttp = new XMLHttpRequest();
-            xhttp.onload = function () { el.callback(JSON.parse(this.responseText)) }
-            xhttp.open("POST", `https://${dev_domain}/api/method/${el.method}`, true);
-            xhttp.setRequestHeader("Authorization", "Basic " + dev_token);
-            xhttp.send(el.args);
-      }
     }else{
 
       frappe.SendMedia = (el) => {
