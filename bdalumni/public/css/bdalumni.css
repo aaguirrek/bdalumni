@@ -3,7 +3,7 @@
     background-image: url(https://jointec.site/assets/img/social/header.jpg);
     background-size: contain;
 }
-.content.page-container{
+.content.page-container#page-Workspaces{
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(15px);
 }
@@ -41,7 +41,7 @@ body[data-route^="Workspaces"] .list-sidebar.overlay-sidebar {
     color:white;
 }
 .page-head.flex {
-    background:transparent;
+    background: var(--bg-color);
 }
 
 .layout-main-section {
