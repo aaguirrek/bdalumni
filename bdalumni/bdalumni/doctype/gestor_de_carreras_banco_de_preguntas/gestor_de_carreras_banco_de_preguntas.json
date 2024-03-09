@@ -1,0 +1,124 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2024-02-16 11:53:03.680887",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "carrera",
+  "column_break_ramo",
+  "titulo",
+  "section_break_xrnq",
+  "pregunta_column",
+  "text_editor_bwin",
+  "section_break_qwde",
+  "respuesta_1",
+  "respuesta_2",
+  "column_break_love",
+  "respuesta_3",
+  "respuesta_4",
+  "respuesta_correcta"
+ ],
+ "fields": [
+  {
+   "fieldname": "carrera",
+   "fieldtype": "Data",
+   "label": "Carrera"
+  },
+  {
+   "fieldname": "column_break_ramo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "titulo",
+   "fieldtype": "Data",
+   "label": "Titulo"
+  },
+  {
+   "fieldname": "section_break_xrnq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pregunta_column",
+   "fieldtype": "Column Break",
+   "label": "Pregunta"
+  },
+  {
+   "fieldname": "text_editor_bwin",
+   "fieldtype": "Text Editor"
+  },
+  {
+   "fieldname": "section_break_qwde",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "respuesta_1",
+   "fieldtype": "Data",
+   "label": "Respuesta 1"
+  },
+  {
+   "fieldname": "respuesta_2",
+   "fieldtype": "Data",
+   "label": "Respuesta 2"
+  },
+  {
+   "fieldname": "column_break_love",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "respuesta_3",
+   "fieldtype": "Data",
+   "label": "Respuesta 3"
+  },
+  {
+   "fieldname": "respuesta_4",
+   "fieldtype": "Data",
+   "label": "Respuesta 4"
+  },
+  {
+   "fieldname": "respuesta_correcta",
+   "fieldtype": "Select",
+   "label": "Respuesta Correcta",
+   "options": "Respuesta 1\nRespuesta 2\nRespuesta 3\nRespuesta 4"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-16 11:53:17.200591",
+ "modified_by": "Administrator",
+ "module": "Bdalumni",
+ "name": "Gestor de Carreras Banco de Preguntas",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
