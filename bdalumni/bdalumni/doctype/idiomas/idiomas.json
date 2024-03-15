@@ -15,7 +15,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Idioma",
-   "options": "Espa\u00f1ol\nIngles\nAlem\u00e1n\nFranc\u00e9s\nItaliano\nCheco\nCoreano\nChino\nJapon\u00e9s\nInd\u00fa\nRuso\nHoland\u00e9s\nNoruego\nIslam\nPortugu\u00e9s"
+   "options": "Espa\u00f1ol\nIngl\u00e9s\nAlem\u00e1n\nFranc\u00e9s\nItaliano\nCheco\nCoreano\nChino\nJapon\u00e9s\nInd\u00fa\nRuso\nHoland\u00e9s\nNoruego\nIslam\nPortugu\u00e9s"
   },
   {
    "fieldname": "nivel",
@@ -28,12 +28,13 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2022-07-15 12:43:24.253165",
+ "modified": "2024-03-15 13:11:57.985180",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Idiomas",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "states": []
 }

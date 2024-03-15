@@ -8,7 +8,13 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "nombre"
+  "nombre",
+  "palabras_clave",
+  "salario_minimo",
+  "salario_maximo",
+  "salario_promedio",
+  "puestos_activos",
+  "puestos_solicitados_anual"
  ],
  "fields": [
   {
@@ -16,11 +22,41 @@
    "fieldtype": "Data",
    "label": "Name",
    "unique": 1
+  },
+  {
+   "fieldname": "palabras_clave",
+   "fieldtype": "Data",
+   "label": "Palabras clave"
+  },
+  {
+   "fieldname": "salario_minimo",
+   "fieldtype": "Data",
+   "label": "Salario minimo"
+  },
+  {
+   "fieldname": "salario_maximo",
+   "fieldtype": "Data",
+   "label": "Salario maximo"
+  },
+  {
+   "fieldname": "salario_promedio",
+   "fieldtype": "Data",
+   "label": "Salario promedio"
+  },
+  {
+   "fieldname": "puestos_activos",
+   "fieldtype": "Data",
+   "label": "Puestos activos"
+  },
+  {
+   "fieldname": "puestos_solicitados_anual",
+   "fieldtype": "Data",
+   "label": "Puestos solicitados anual"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-11 11:21:11.658811",
+ "modified": "2024-02-27 11:53:42.230577",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Puestos gestor",
