@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2024-02-16 11:56:42.228962",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "carrera",
+  "numero_clases",
+  "fecha_inicio",
+  "column_break_noiu",
+  "nombre_del_curso",
+  "enlace_del_curso",
+  "fecha_fin",
+  "section_break_cedn",
+  "descripcion_del_curso"
+ ],
+ "fields": [
+  {
+   "fieldname": "carrera",
+   "fieldtype": "Data",
+   "label": "Carrera"
+  },
+  {
+   "fieldname": "numero_clases",
+   "fieldtype": "Int",
+   "label": "Numero clases"
+  },
+  {
+   "fieldname": "fecha_inicio",
+   "fieldtype": "Date",
+   "label": "Fecha inicio"
+  },
+  {
+   "fieldname": "column_break_noiu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nombre_del_curso",
+   "fieldtype": "Data",
+   "label": "Nombre del curso"
+  },
+  {
+   "fieldname": "enlace_del_curso",
+   "fieldtype": "Data",
+   "label": "Enlace del curso"
+  },
+  {
+   "fieldname": "fecha_fin",
+   "fieldtype": "Date",
+   "label": "Fecha Fin"
+  },
+  {
+   "fieldname": "section_break_cedn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "descripcion_del_curso",
+   "fieldtype": "Text Editor",
+   "label": "Descripcion del curso"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-16 11:59:52.904721",
+ "modified_by": "Administrator",
+ "module": "Bdalumni",
+ "name": "Gestor Competencia Curso",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

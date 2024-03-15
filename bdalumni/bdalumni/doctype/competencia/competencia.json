@@ -1,0 +1,58 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:{puesto}-{competencia}",
+ "creation": "2024-02-16 11:38:46.023627",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "puesto",
+  "competencia",
+  "plabras_claves_separadas_por_coma"
+ ],
+ "fields": [
+  {
+   "fieldname": "puesto",
+   "fieldtype": "Link",
+   "label": "Puesto",
+   "options": "Puestos gestor"
+  },
+  {
+   "fieldname": "competencia",
+   "fieldtype": "Data",
+   "label": "Competencia"
+  },
+  {
+   "fieldname": "plabras_claves_separadas_por_coma",
+   "fieldtype": "Small Text",
+   "label": "Plabras Claves separadas por coma"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-02-16 11:41:12.199458",
+ "modified_by": "Administrator",
+ "module": "Bdalumni",
+ "name": "Competencia",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
