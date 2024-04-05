@@ -31,17 +31,15 @@
   },
   {
    "fieldname": "desde",
-   "fieldtype": "Select",
+   "fieldtype": "Int",
    "in_list_view": 1,
-   "label": "Desde el a\u00f1o",
-   "options": "2024\n2023\n2022\n2021\n2020\n2019\n2018\n2017\n2016\n2015\n2014\n2013\n2012\n2011\n2010\n2009\n2008\n2007\n2006\n2005\n2004\n2003\n2002\n2001\n2000\n1999\n1998\n1997\n1996\n1995\n1994\n1993\n1992\n1991\n1990\n1989\n1988\n1987\n1986\n1985\n1984\n1983\n1982\n1981\n1980\n1979\n1978\n1977\n1976\n1975\n1974\n1973\n1972\n1971\n1970"
+   "label": "Desde el a\u00f1o"
   },
   {
    "fieldname": "hasta",
-   "fieldtype": "Select",
+   "fieldtype": "Int",
    "in_list_view": 1,
-   "label": "Hasta el a\u00f1o",
-   "options": "2024\n2023\n2022\n2021\n2020\n2019\n2018\n2017\n2016\n2015\n2014\n2013\n2012\n2011\n2010\n2009\n2008\n2007\n2006\n2005\n2004\n2003\n2002\n2001\n2000\n1999\n1998\n1997\n1996\n1995\n1994\n1993\n1992\n1991\n1990\n1989\n1988\n1987\n1986\n1985\n1984\n1983\n1982\n1981\n1980\n1979\n1978\n1977\n1976\n1975\n1974\n1973\n1972\n1971\n1970"
+   "label": "Hasta el a\u00f1o"
   },
   {
    "fieldname": "logo",
@@ -76,7 +74,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-03-15 13:12:41.571027",
+ "modified": "2024-04-05 15:15:43.369739",
  "modified_by": "Administrator",
  "module": "Bdalumni",
  "name": "Perfil del exalumno Educacion Superior",
