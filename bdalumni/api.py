@@ -1,5 +1,7 @@
+import frappe.defaults
 from frappe.desk.form.save import send_updated_docs
 from frappe.share import add_docshare
+import frappe.utils
 from .javaUtil import *
 import frappe
 from frappe.utils.password import update_password as _update_password
@@ -7,6 +9,20 @@ from frappe.utils.password import update_password as _update_password
 def docField(docname):
 	data = frappe.db.sql("""SELECT * FROM tabDocField WHERE parent = %(docname)s ORDER BY idx ASC;""", values={"docname":docname}, as_dict=1)
 	return data
+
+@frappe.whitelist(allow_guest=True)
+def get_initial(name):
+	data = frappe.get_doc("Perfil del exalumno", name)
+	data.foto = frappe.utils.get_url( data.foto,True) 
+	asesorias =  frappe.db.count(dt="Asesorias",filters=[["egresado",'=',name],['estado','=','Aprobado']])
+	eventos =  frappe.db.count(dt="Eventos",filters=[["fecha",'>',frappe.utils.today()]])
+	postulacion = frappe.get_all('Postulacion',fields=["*"],filters=[['exalumno','=',name]])
+	extra={
+		"full_name":data.nombre + " "+data.apellidos,
+		"cover":frappe.utils.get_url( "/files/header-min.jpg",True),
+		"cargo":data.experiencia_laboral[len(data.experiencia_laboral)-1].cargo+" en "+data.experiencia_laboral[len(data.experiencia_laboral)-1].nombre_de_la_empresa
+	}
+	return {'extra':extra,"egresado":data,'asesorias':asesorias,'eventos':eventos,'postulacion':postulacion}
 
 @frappe.whitelist(allow_guest=True)
 def checkEmpresa(ruc,email,first_name):
@@ -177,3 +193,55 @@ def cancel(doctype,name):
 	else:
 		doc.cancel()
 		frappe.msgprint("Se ha desactivado tu publicación", indicator="red", alert=True)
+
+
+@frappe.whitelist(allow_guest=True)
+def get_ofertas_all():
+	lista_carreras = frappe.get_list(doctype="Nombre de carrera",fields=["name","nombre"],limit_page_length=200,order_by="nombre asc")
+	ofertas_laborales = frappe.get_list(doctype="Oferta Laboral",fields=["name","oferta","mostrar_salario","fecha_de_publicación","fin_de_publicación","hasta","desde","empresa","logo_empresa","grado_profesional","nombre_de_carrera","tipo_de_puesto","localidad","puestos_sin_frontera","vacantes"],filters=[["docstatus","=","1"],["fin_de_publicación",">",frappe.utils.nowdate() ]],limit_page_length=200,order_by="modified desc")
+	ofertas=[]
+	for oferta in ofertas_laborales:
+		oferta.logo_de_la_empresa = frappe.utils.get_url( oferta.logo_empresa,True)
+		oferta.desde = "S/. "+str(oferta.desde)
+		if oferta.hasta > 0 :
+			oferta.desde = str(oferta.desde)+" - S/. "+str(oferta.hasta)
+		ofertas.append(oferta)
+	
+	return {
+		"carreras":lista_carreras,
+		"ofertas":ofertas
+	}
+
+@frappe.whitelist(allow_guest=True)
+def get_oferta(name,user=None):
+	oferta 					= frappe.get_doc( "Oferta Laboral" , name )
+	extras 					= {
+		"logo_empresa":"",
+		"desde":""
+	}
+	extras["logo_empresa"]  = frappe.utils.get_url( oferta.logo_empresa , True )
+	extras["desde"] 		= "S/. " + str( oferta.desde )
+
+	if  oferta.desde > 0 and oferta.hasta > 0:
+		extras["desde"] = "S/. " + str(oferta.desde)+" - S/. "+str(oferta.hasta)
+	if  oferta.desde == 0:
+		extras["desde"] = "S/. " + str(oferta.hasta)
+
+
+	postulacion = frappe.get_list(
+		doctype = "Postulacion",
+		fields = ["*"],
+		filters = [
+			["exalumno","=",user],
+			["oferta_laboral","=",name]
+		]
+	)
+
+
+	return {
+
+		"oferta":oferta,
+		"extras":extras,
+		"postulacion":postulacion
+
+	}
