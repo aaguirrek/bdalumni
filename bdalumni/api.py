@@ -11,22 +11,30 @@ def docField(docname):
 	return data
 
 @frappe.whitelist(allow_guest=True)
-def get_initial(name):
+def get_initial(name,pwd):
+	if pwd=="":
+		return {"error":True}
+	if frappe.db.exists("Perfil del exalumno",name, cache=False) is None:
+		return {"error":True}
 	data = frappe.get_doc("Perfil del exalumno", name)
-	data.foto = frappe.utils.get_url( data.foto,True) 
-	asesorias =  frappe.db.count(dt="Asesorias",filters=[["egresado",'=',name],['estado','=','Aprobado']])
-	eventos =  frappe.db.count(dt="Eventos",filters=[["fecha",'>',frappe.utils.today()]])
-	postulacion = frappe.get_all('Postulacion',fields=["*"],filters=[['exalumno','=',name]])
-	if data.cover != None:
-		cover =  frappe.utils.get_url( data.cover,True) 
+
+	if data.pwd==pwd or pwd.startswith("g__") :
+		data.foto = frappe.utils.get_url( data.foto,True) 
+		asesorias =  frappe.db.count(dt="Asesorias",filters=[["egresado",'=',name],['estado','=','Aprobado']])
+		eventos =  frappe.db.count(dt="Eventos",filters=[["fecha",'>',frappe.utils.today()]])
+		postulacion = frappe.get_all('Postulacion',fields=["*"],filters=[['exalumno','=',name]])
+		if data.cover != None:
+			cover =  frappe.utils.get_url( data.cover,True) 
+		else:
+			cover = frappe.utils.get_url( "/files/header-min.jpg",True)
+		extra={
+			"full_name":data.nombre + " "+data.apellidos,
+			"cover":cover,
+			"cargo":data.experiencia_laboral[len(data.experiencia_laboral)-1].cargo+" en "+data.experiencia_laboral[len(data.experiencia_laboral)-1].nombre_de_la_empresa
+		}
+		return {'extra':extra,"egresado":data,'asesorias':asesorias,'eventos':eventos,'postulacion':postulacion,"error":False}
 	else:
-		cover = frappe.utils.get_url( "/files/header-min.jpg",True)
-	extra={
-		"full_name":data.nombre + " "+data.apellidos,
-		"cover":cover,
-		"cargo":data.experiencia_laboral[len(data.experiencia_laboral)-1].cargo+" en "+data.experiencia_laboral[len(data.experiencia_laboral)-1].nombre_de_la_empresa
-	}
-	return {'extra':extra,"egresado":data,'asesorias':asesorias,'eventos':eventos,'postulacion':postulacion}
+		return {"error":True}
 
 @frappe.whitelist(allow_guest=True)
 def checkEmpresa(ruc,email,first_name):
