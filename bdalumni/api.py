@@ -2,7 +2,7 @@ import frappe.defaults
 from frappe.desk.form.save import send_updated_docs
 from frappe.share import add_docshare
 import frappe.utils
-from .javaUtil import *
+#from .javaUtil import *
 import frappe
 from frappe.utils.password import update_password as _update_password
 @frappe.whitelist(allow_guest=True)
@@ -17,8 +17,7 @@ def get_initial(name,pwd):
 	if frappe.db.exists("Perfil del exalumno",name, cache=False) is None:
 		return {"error":True}
 	data = frappe.get_doc("Perfil del exalumno", name)
-
-	if data.pwd==pwd or pwd.startswith("g__") :
+	if data.pwd==pwd or pwd.startswith("g__"):
 		data.foto = frappe.utils.get_url( data.foto,True) 
 		asesorias =  frappe.db.count(dt="Asesorias",filters=[["egresado",'=',name],['estado','=','Aprobado']])
 		eventos =  frappe.db.count(dt="Eventos",filters=[["fecha",'>',frappe.utils.today()]])
