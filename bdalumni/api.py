@@ -65,7 +65,6 @@ def checkEmpresa(ruc,email,first_name):
 		
 		return True
 
-
 @frappe.whitelist(allow_guest=True)
 def docTable(docname):
 	data = frappe.db.sql("""SELECT * FROM tabDocField WHERE parent = %(docname)s  AND in_list_view = 1  ORDER BY idx ASC;""", values={"docname":docname}, as_dict=1)
